@@ -54,7 +54,7 @@ const cardData = [
       "Red Blood Cell (RBC) Count",
       "Platelet Count",
       "Erythrocyte Sedimentation Rate (ESR)",
-      "Peripheral Blood Smear"
+      "Peripheral Blood Smear",
     ],
     importance:
       "Haematology tests are vital for diagnosing a wide array of disorders including anemia, leukemia, infections, clotting issues, and immune system dysfunctions. These tests form the basis of routine health assessments.",
@@ -63,9 +63,8 @@ const cardData = [
     patientPreparation:
       "No specific preparation is usually required. However, it’s advised to inform the healthcare provider about any medications being taken as they may affect blood parameters.",
     interpretation:
-      "• Low hemoglobin or RBC may indicate anemia. \n• High WBC count could suggest an infection. \n• Low platelet count might indicate a bleeding disorder. \n• Abnormal cells in the blood smear may be a sign of leukemia or other bone marrow diseases.\n\nA comprehensive interpretation should always be done by a physician based on symptoms and medical history."
-  }
-,  
+      "• Low hemoglobin or RBC may indicate anemia. \n• High WBC count could suggest an infection. \n• Low platelet count might indicate a bleeding disorder. \n• Abnormal cells in the blood smear may be a sign of leukemia or other bone marrow diseases.\n\nA comprehensive interpretation should always be done by a physician based on symptoms and medical history.",
+  },
   {
     title: "Liver Function Test (LFT)",
     description:
@@ -79,7 +78,7 @@ const cardData = [
       "Gamma-glutamyl transferase (GGT)",
       "Total and direct bilirubin",
       "Albumin",
-      "Prothrombin time (PT/INR)"
+      "Prothrombin time (PT/INR)",
     ],
     importance:
       "LFTs help detect liver infections, monitor the progression of liver diseases, and evaluate the effectiveness of treatments.",
@@ -88,7 +87,7 @@ const cardData = [
     patientPreparation:
       "Fasting may be required. Inform your doctor about any medications you're taking.",
     interpretation:
-      "Elevated ALT and AST levels may indicate liver damage. High bilirubin can suggest bile duct issues or liver dysfunction."
+      "Elevated ALT and AST levels may indicate liver damage. High bilirubin can suggest bile duct issues or liver dysfunction.",
   },
   {
     title: "Kidney Function Test (KFT)",
@@ -101,7 +100,7 @@ const cardData = [
       "Blood urea nitrogen (BUN)",
       "Estimated glomerular filtration rate (eGFR)",
       "Electrolytes (sodium, potassium, chloride)",
-      "Urinalysis"
+      "Urinalysis",
     ],
     importance:
       "Essential for detecting kidney diseases, monitoring kidney function, and guiding treatment decisions.",
@@ -110,7 +109,7 @@ const cardData = [
     patientPreparation:
       "Fasting might be necessary. Stay hydrated but avoid excessive fluid intake before the test.",
     interpretation:
-      "High creatinine and BUN levels can indicate impaired kidney function. Abnormal electrolyte levels may suggest kidney-related issues."
+      "High creatinine and BUN levels can indicate impaired kidney function. Abnormal electrolyte levels may suggest kidney-related issues.",
   },
   {
     title: "Lipid Profile",
@@ -124,7 +123,7 @@ const cardData = [
       "High-density lipoprotein (HDL)",
       "Triglycerides",
       "Very low-density lipoprotein (VLDL)",
-      "Cholesterol/HDL ratio"
+      "Cholesterol/HDL ratio",
     ],
     importance:
       "Helps in evaluating the risk of heart disease and guiding dietary and lifestyle interventions.",
@@ -133,7 +132,7 @@ const cardData = [
     patientPreparation:
       "Fasting for 9–12 hours is typically required. Only water is permitted during the fasting period.",
     interpretation:
-      "High LDL and triglyceride levels increase heart disease risk, while high HDL levels are protective."
+      "High LDL and triglyceride levels increase heart disease risk, while high HDL levels are protective.",
   },
   {
     title: "Diabetes Profile",
@@ -146,7 +145,7 @@ const cardData = [
       "Postprandial blood glucose",
       "Hemoglobin A1c (HbA1c)",
       "Random blood sugar",
-      "Insulin levels"
+      "Insulin levels",
     ],
     importance:
       "Crucial for diagnosing diabetes, monitoring blood sugar control, and preventing complications.",
@@ -155,7 +154,7 @@ const cardData = [
     patientPreparation:
       "Fasting for at least 8 hours is required for certain tests. Follow your doctor's instructions regarding medication intake.",
     interpretation:
-      "Elevated fasting glucose and HbA1c levels indicate poor blood sugar control and a higher risk of diabetes-related complications."
+      "Elevated fasting glucose and HbA1c levels indicate poor blood sugar control and a higher risk of diabetes-related complications.",
   },
   {
     title: "Fine Needle Aspiration Cytology (FNAC)",
@@ -163,10 +162,7 @@ const cardData = [
       "FNAC is a diagnostic procedure where a thin needle is used to extract cells from a lump or mass for microscopic examination.",
     img: img1,
     price: 3000,
-    components: [
-      "Cellular morphology assessment",
-      "Cytopathological analysis"
-    ],
+    components: ["Cellular morphology assessment", "Cytopathological analysis"],
     importance:
       "Helps in diagnosing infections, inflammatory conditions, and cancers with minimal invasiveness.",
     recommendedWhen:
@@ -174,7 +170,7 @@ const cardData = [
     patientPreparation:
       "Inform your doctor about any medications or bleeding disorders. Specific preparation may vary based on the biopsy site.",
     interpretation:
-      "Results can indicate benign conditions, infections, or malignancies, guiding further management."
+      "Results can indicate benign conditions, infections, or malignancies, guiding further management.",
   },
   {
     title: "Vitamin D and B12 Tests",
@@ -182,10 +178,7 @@ const cardData = [
       "These tests measure the levels of Vitamin D and Vitamin B12 in your blood, essential nutrients for bone health and nerve function.",
     img: img2,
     price: 2000,
-    components: [
-      "25-hydroxyvitamin D",
-      "Vitamin B12 (cobalamin)"
-    ],
+    components: ["25-hydroxyvitamin D", "Vitamin B12 (cobalamin)"],
     importance:
       "Detects deficiencies that can lead to bone disorders, fatigue, neurological issues, and anemia.",
     recommendedWhen:
@@ -193,7 +186,7 @@ const cardData = [
     patientPreparation:
       "Fasting may be required. Inform your doctor about any supplements you're taking.",
     interpretation:
-      "Low Vitamin D levels can lead to bone disorders, while low B12 levels can cause anemia and neurological problems."
+      "Low Vitamin D levels can lead to bone disorders, while low B12 levels can cause anemia and neurological problems.",
   },
   {
     title: "Hormone Tests",
@@ -206,7 +199,7 @@ const cardData = [
       "Sex hormones (estrogen, testosterone)",
       "Cortisol",
       "Insulin",
-      "Growth hormone"
+      "Growth hormone",
     ],
     importance:
       "Helps in diagnosing hormonal imbalances, thyroid disorders, adrenal issues, and reproductive problems.",
@@ -214,8 +207,8 @@ const cardData = [
       "Recommended for individuals with symptoms like fatigue, weight changes, menstrual irregularities, or infertility.",
     patientPreparation:
       "Fasting may be required for certain tests. Timing of the test may be crucial; follow your doctor's instructions.",
-      interpretation:
-      "Abnormal hormone levels can indicate various endocrine disorders requiring medical intervention. For example, elevated TSH may suggest hypothyroidism, while high cortisol could indicate Cushing’s syndrome."
+    interpretation:
+      "Abnormal hormone levels can indicate various endocrine disorders requiring medical intervention. For example, elevated TSH may suggest hypothyroidism, while high cortisol could indicate Cushing’s syndrome.",
   },
   {
     title: "Urine and Sputum Examinations",
@@ -227,7 +220,7 @@ const cardData = [
       "Urinalysis (physical, chemical, and microscopic analysis)",
       "Urine culture and sensitivity",
       "Sputum smear microscopy (for tuberculosis and infections)",
-      "Sputum culture"
+      "Sputum culture",
     ],
     importance:
       "Essential for diagnosing urinary tract infections (UTIs), kidney disorders, tuberculosis, pneumonia, and other respiratory diseases.",
@@ -236,12 +229,9 @@ const cardData = [
     patientPreparation:
       "For urine test: Collect midstream clean-catch urine in a sterile container. For sputum: Best collected early morning before eating or drinking, after rinsing the mouth.",
     interpretation:
-      "Presence of bacteria, white or red blood cells in urine indicates infection or inflammation. In sputum, detection of Mycobacterium tuberculosis confirms TB; presence of neutrophils or pathogens suggests respiratory infections."
-  }
+      "Presence of bacteria, white or red blood cells in urine indicates infection or inflammation. In sputum, detection of Mycobacterium tuberculosis confirms TB; presence of neutrophils or pathogens suggests respiratory infections.",
+  },
 ];
-
- 
-
 
 const Slide = ({ img, heading, subHeading }) => {
   return (
@@ -282,14 +272,21 @@ const Home = () => {
         ))}
       </Swiper>
 
-      <div className="flex w-[80%] mx-auto shadow-2xl rounded-3xl  my-32">
-        <div className="space-y-4.5 border rounded-l-3xl  p-2 px-5 border-[#e3f4a0]/30 w-[50%]">
-          <h1 className="text-7xl font-ralewayB text-[#dff391]">
+      <div className="flex w-[95%] md:w-80% mx-auto shadow-2xl rounded-3xl  my-10 md:my-32">
+        <div className="space-y-4.5 border rounded-l-3xl  p-4 px-5 border-[#e3f4a0]/30 md:w-[50%]">
+          <h1 className="text-6xl md:text-7xl font-ralewayB text-[#dff391]">
             Olek Diagnostics
           </h1>
           <h1 className="text-3xl font-ralewaySb text-[#dff391]">
             Your Health, Our Priority
           </h1>
+          <div className=" w-[100%]">
+            <img
+              src={bloodTest}
+              className="md:hidden w-full h-[25rem] object-cover"
+            ></img>
+          </div>
+
           <p className="font-ralewayM text-gray-200">
             At Olek Diagnostics in Dehradun, Uttarakhand, your comfort is
             paramount. Our state-of-the-art clinic is thoughtfully designed with
@@ -306,17 +303,17 @@ const Home = () => {
             </span>{" "}
           </button>
         </div>
-        <div className=" w-[50%]">
+        <div className="hidden md:block w-[50%]">
           <img src={bloodTest} className="w-full h-[25rem] object-cover"></img>
         </div>
       </div>
 
-      <div className="flex flex-col space-y-6">
+      <div className="flex flex-col mt-20 space-y-6">
         <h1 className="text-center text-4xl font-ralewayB text-[#dff391]">
           Our Services
         </h1>
-        <div className="flex flex-wrap gap-8 justify-center ">
-          {cardData.map((item,index) => (
+        <div className="flex flex-wrap gap-4 md:gap-8 justify-center ">
+          {cardData.map((item, index) => (
             <Card data={item} key={index} />
           ))}
         </div>

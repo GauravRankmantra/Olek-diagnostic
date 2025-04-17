@@ -3,19 +3,19 @@ import { IoIosArrowForward } from "react-icons/io";
 
 const Card = ({ data }) => {
   return (
-    <div className="w-3/12 m-3 rounded-lg overflow-hidden bg-[#dff391] shadow-lg hover:shadow-xl transition-shadow duration-300 card-fade-in">
+    <div className="md:w-3/12 w-5/12 m-3 rounded-lg overflow-hidden bg-[#dff391] shadow-lg hover:shadow-xl transition-shadow duration-300 card-fade-in">
       <div className="relative space-y-2">
         <img
           className="w-full h-[15rem] object-cover rounded-t-lg"
           src={data.img}
           alt={data.title}
         />
-        <div className="flex p-4 items-center">
+        <div className="flex md:p-4 p-2 items-center">
           <div className="pr-2 space-y-2 w-10/12">
-            <h1 className="text-2xl font-ralewayB text-[#005b4c] leading-snug">
+            <h1 className="md:text-2xl text-lg font-ralewayB text-[#005b4c] leading-snug">
               {data.title}
             </h1>
-            <p className="font-ralewayM text-[#006a58] text-sm multiline-ellipsis">
+            <p className="font-ralewayM text-[#006a58] text-xs md:text-sm  multiline-ellipsis">
               {data.description}
             </p>
           </div>
