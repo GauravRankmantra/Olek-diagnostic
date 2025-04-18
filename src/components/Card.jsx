@@ -8,7 +8,7 @@ const Card = ({ data }) => {
   return (
     <>
       {showForm && <ContactForm onClose={() => setShowForm(false)} />}
-      <div className="md:w-3/12 w-5/12 m-3 rounded-lg overflow-hidden bg-[#dff391] shadow-lg hover:shadow-xl transition-shadow duration-300 card-fade-in">
+      <div className="md:w-3/12 w-[45%] md:m-3 my-2 mx-1 rounded-lg overflow-hidden bg-[#dff391] shadow-lg hover:shadow-xl transition-shadow duration-300 card-fade-in">
         <div className="relative space-y-2">
           <img
             className="w-full md:h-[15rem] h-[10rem] object-cover rounded-t-lg"
@@ -34,7 +34,7 @@ const Card = ({ data }) => {
             className="flex border p-1 rounded border-gray-600 cursor-pointer hover:bg-[#005b4c] group m-auto my-2 md:w-4/12 justify-center items-center space-x-1.5"
           >
             <AiOutlineFileDone className="md:w-6 md:h-6 group-hover:text-[#dff391]" />
-            <span className="font-ralewaySb text-xs md:text-sm group-hover:text-[#dff391]">
+            <span className="font-ralewaySb text-sm group-hover:text-[#dff391]">
               Book Now
             </span>
           </button>

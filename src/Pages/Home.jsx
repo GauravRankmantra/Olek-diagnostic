@@ -435,7 +435,7 @@ const Home = () => {
       <div className="flex flex-col  space-y-6">
         <div className="text-center py-6 bg-[#005b4c]">
           <div
-            className={`flex flex-wrap gap-4 md:gap-8 justify-center overflow-hidden transition-all duration-500 ${
+            className={`flex flex-wrap gap-2 md:gap-8 justify-center overflow-hidden transition-all duration-500 ${
               showAll ? "max-h-[1000rem]" : "max-h-[36rem]"
             }`}
           >
