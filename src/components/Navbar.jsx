@@ -38,33 +38,44 @@ const Navbar = () => {
 
         {/* Nav Links */}
         <ul
-          className={`flex flex-col md:flex-row md:items-center md:space-x-8 absolute md:static top-16 left-0 w-full md:w-auto bg-gray-200 md:bg-transparent z-40 p-4 md:p-0 transition-all duration-300 ease-in-out ${
-            isOpen ? "block border-t md:border-t-0 space-y-1.5" : "hidden md:flex"
+  className={`flex flex-col md:flex-row md:items-center md:space-x-8 absolute md:static top-16 left-0 w-full md:w-auto bg-gray-200 md:bg-transparent z-40 p-4 md:p-0 transition-all duration-300 ease-in-out ${
+    isOpen ? "block border-t md:border-t-0 space-y-1.5" : "hidden md:flex"
+  }`}
+>
+  {navLinks.map((link, idx) => {
+    const isActive = location.pathname === link.path;
+    return (
+      <li key={idx} className="relative group">
+        <Link
+          to={link.path}
+          onClick={() => setIsOpen(false)}
+          className={`block py-1 px-3 text-gray-900 rounded transition ${
+            isActive ? "text-[#005b4c]" : "hover:text-[#22443f]"
           }`}
         >
-          {navLinks.map((link, idx) => {
-            const isActive = location.pathname === link.path;
-            return (
-              <li key={idx} className="relative group">
-                <Link
-                  to={link.path}
-                  onClick={() => setIsOpen(false)}
-                  className={`block py-1 px-3 text-gray-900 rounded transition ${
-                    isActive ? "text-[#005b4c]" : "hover:text-[#22443f]"
-                  }`}
-                >
-                  {link.name}
-                  {/* Underline effect */}
-                  <span
-                    className={`absolute left-0 bottom-0 h-[1px] bg-[#005b4c] transition-transform duration-300 ease-in-out origin-left w-full transform ${
-                      isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
-                    }`}
-                  ></span>
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+          {link.name}
+          <span
+            className={`absolute left-0 bottom-0 h-[1px] bg-[#005b4c] transition-transform duration-300 ease-in-out origin-left w-full transform ${
+              isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
+            }`}
+          ></span>
+        </Link>
+      </li>
+    );
+  })}
+
+  {/* 📞 Call Button - visible only on mobile when menu is open */}
+  <li className="md:hidden pt-2">
+    <a
+      href={`tel:${phoneNumber}`}
+      className="flex items-center justify-center bg-[#005b4c] hover:bg-[#dff391] p-2 rounded transition group w-full"
+    >
+      <IoMdCall className="w-5 h-5 mr-2 text-[#dff391] group-hover:text-[#005b4c]" />
+      <span className="text-sm text-[#dff391] group-hover:text-[#005b4c]">Call us</span>
+    </a>
+  </li>
+</ul>
+
 
         {/* Call Button */}
         <a
@@ -72,19 +83,23 @@ const Navbar = () => {
           className="hidden md:flex items-center bg-[#005b4c] hover:bg-[#dff391] p-2 rounded transition group"
         >
           <IoMdCall className="w-5 h-5 mr-2 text-[#dff391] group-hover:text-[#005b4c]" />
-          <span className="text-sm text-[#dff391] group-hover:text-[#005b4c]">Call us</span>
+          <span className="text-sm text-[#dff391] group-hover:text-[#005b4c]">
+            Call us
+          </span>
         </a>
       </div>
 
       {/* Mobile Call button */}
       {isOpen && (
-        <div className="md:hidden px-4 pb-4">
+        <div className="md:hidden bg-gray-200 px-4 pb-4 border-t border-gray-300">
           <a
             href={`tel:${phoneNumber}`}
-            className="flex items-center justify-center bg-[#005b4c] hover:bg-[#dff391] p-2 rounded transition group w-full"
+            className="mt-2 flex items-center justify-center bg-[#005b4c] hover:bg-[#dff391] p-2 rounded transition group w-full"
           >
             <IoMdCall className="w-5 h-5 mr-2 text-[#dff391] group-hover:text-[#005b4c]" />
-            <span className="text-sm text-[#dff391] group-hover:text-[#005b4c]">Call us</span>
+            <span className="text-sm text-[#dff391] group-hover:text-[#005b4c]">
+              Call us
+            </span>
           </a>
         </div>
       )}
