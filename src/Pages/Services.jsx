@@ -253,7 +253,7 @@ const cardData = [
 
           <button
             onClick={() => setShowAll((prev) => !prev)}
-            className="mt-10 px-6 cursor-pointer py-2 flex w-2/12 space-x-1.5 m-auto justify-center items-center text-[#005b4c] bg-[#dff391]  transition rounded-md"
+            className="mt-10 px-6 cursor-pointer py-2 flex md:w-2/12 space-x-1.5 m-auto justify-center items-center text-[#005b4c] bg-[#dff391]  transition rounded-md"
           >
             {showAll ? <IoIosArrowUp /> : <IoIosArrowDown />}
             <span className="font-ralewaySb">
