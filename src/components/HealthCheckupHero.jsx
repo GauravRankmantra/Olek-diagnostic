@@ -5,8 +5,10 @@ import { MdOutlineHealthAndSafety } from "react-icons/md";
 import { GiHeartOrgan } from "react-icons/gi";
 import { RiMentalHealthLine } from "react-icons/ri";
 import { SquareChartGantt } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const HealthCheckupHero = () => {
+    const navigate = useNavigate();
   return (
     <section className="w-full font-ralewayB bg-gradient-to-r from-white via-gray-50 to-white py-12 px-4 md:px-10 lg:px-20">
       <div className="grid md:grid-cols-2 items-center gap-10">
@@ -48,7 +50,7 @@ const HealthCheckupHero = () => {
             </li>
           </ul>
 
-          <button className="mt-4 inline-flex items-center bg-[#a01a5a] text-white px-6 py-3 rounded-xl shadow cursor-pointer hover:bg-[#66334c] transition duration-300">
+          <button  onClick={() => navigate("/packages")}  className="mt-4 inline-flex items-center bg-[#a01a5a] text-white px-6 py-3 rounded-xl shadow cursor-pointer hover:bg-[#66334c] transition duration-300">
             Explore Checkup Packages
             <MoveRight className="ml-2" />
           </button>
