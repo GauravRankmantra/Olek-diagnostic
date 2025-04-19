@@ -24,7 +24,7 @@ const Card = ({ data,type }) => {
                 {data.title}
               </h1>
 
-              <p className="font-ralewayM text-[#6e0035a9] text-xs md:text-sm text-start multiline-ellipsis">
+              <p className="font-ralewayM text-[#6e0035a9] text-sm md:text-sm text-start multiline-ellipsis">
                 {data.description || data.tests}
               </p>
             </div>

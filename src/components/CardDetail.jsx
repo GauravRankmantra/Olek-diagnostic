@@ -23,7 +23,7 @@ const CardDetail = ({ type, bookNow, onClose, data }) => {
 
         <div className="grid md:grid-cols-2 gap-4 bg-[rgba(255,164,208,0.2)]">
           {/* Image */}
-          <div className="w-full h-64 md:h-auto overflow-hidden">
+          <div className="w-full h-36 sm:h-64 md:h-auto overflow-hidden">
             <img
               src={data.img}
               alt={data.title}
@@ -107,7 +107,8 @@ const CardDetail = ({ type, bookNow, onClose, data }) => {
               )}
               {type === "packages" && (
                 <span className="text-lg flex flex-col font-sans font-semibold text-[#a01a5a]">
-                  Offer Price <span className="text-green-700">₹ {data.OfferPrice}</span> 
+                  Offer Price{" "}
+                  <span className="text-green-700">₹ {data.OfferPrice}</span>
                 </span>
               )}
 
