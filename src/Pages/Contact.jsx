@@ -24,15 +24,15 @@ const Contact = () => {
   };
   return (
     <>
-      <section className="relative  font-ralewayR z-10 overflow-hidden bg-gray-200 py-20 px-5 md:px-10 lg:px-20  dark:bg-dark lg:py-[120px]">
+      <section className="relative  font-ralewayR z-10 overflow-hidden bg-gray-200 md:py-20  md:px-10 lg:px-20  dark:bg-dark lg:py-[120px]">
         <div className="container p-4 rounded-lg bg-gray-100 shadow-2xl">
           <div className="-mx-4 flex flex-wrap lg:justify-between">
             <div className="w-full px-4 lg:w-1/2 xl:w-6/12">
               <div className="mb-12 max-w-[570px] lg:mb-0">
-                <span className="mb-4 block text-base text-[#005b4c] font-semibold text-primary">
+                <span className="mb-4 block text-base text-[#a01a5a] font-semibold text-primary">
                   Contact Us
                 </span>
-                <h2 className="mb-6 text-[32px] font-bold uppercase text-[#005b4c] sm:text-[40px] lg:text-[36px] xl:text-[40px]">
+                <h2 className="mb-6 text-[32px] font-bold uppercase text-[#a01a5a] sm:text-[40px] lg:text-[36px] xl:text-[40px]">
                   GET IN TOUCH WITH US
                 </h2>
                 <p className="mb-9 text-base leading-relaxed dark:text-dark-6">
@@ -60,7 +60,7 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div className="w-full">
-                    <h4 className="mb-1 text-xl font-bold text-[#005b4c]">
+                    <h4 className="mb-1 text-xl font-bold text-[#a01a5a]">
                       Our Location
                     </h4>
                     <p className="text-base text-body-color dark:text-dark-6">
@@ -101,7 +101,7 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div className="w-full">
-                    <h4 className="mb-1 text-xl font-bold text-[#005b4c]">
+                    <h4 className="mb-1 text-xl font-bold text-[#a01a5a]">
                       Phone Number
                     </h4>
                     <p className="text-base font-sans text-body-color dark:text-dark-6">
@@ -126,7 +126,7 @@ const Contact = () => {
                     </svg>
                   </div>
                   <div className="w-full">
-                    <h4 className="mb-1 text-xl font-bold text-[#005b4c] ">
+                    <h4 className="mb-1 text-xl font-bold text-[#a01a5a] ">
                       Email Address
                     </h4>
                     <p className="text-base text-body-color dark:text-dark-6">
@@ -163,7 +163,7 @@ const Contact = () => {
                   <div>
                     <button
                       type="submit"
-                      className="w-full cursor-pointer rounded border border-primary bg-[#005b4c] p-3 text-white transition hover:bg-opacity-90"
+                      className="w-full cursor-pointer rounded border border-primary bg-[#a01a5a] p-3 text-white transition hover:bg-opacity-90"
                     >
                       Send Message
                     </button>
@@ -182,7 +182,7 @@ const Contact = () => {
                         fillRule="evenodd"
                         clipRule="evenodd"
                         d="M0 100C0 44.7715 0 0 0 0C55.2285 0 100 44.7715 100 100C100 100 100 100 0 100Z"
-                        fill="#005b4c"
+                        fill="#a01a5a"
                       />
                     </svg>
                   </span>

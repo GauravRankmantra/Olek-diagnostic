@@ -6,7 +6,7 @@ const Location = () => {
     <div className="w-full px-4 my-10 py-12 bg-gray-200">
       <div className="max-w-6xl mx-auto bg-white rounded-2xl shadow-lg overflow-hidden grid md:grid-cols-2 grid-cols-1">
         {/* Contact Info */}
-        <div className="p-8 flex flex-col font-ralewayM text-[#005b4c] justify-center bg-gradient-to-br from-[#dff391] to-[#f1ffb7] ">
+        <div className="p-8 flex flex-col font-ralewayM text-[#a01a5a] justify-center bg-gradient-to-br from-[rgba(255,164,208,0.8)] to-[rgba(255,164,208,0.5)] ">
           <h2 className="text-2xl font-bold mb-4 ">Get In Touch</h2>
           <p className="mb-6 text-sm">
             We're always here to help! Reach out to us through the following

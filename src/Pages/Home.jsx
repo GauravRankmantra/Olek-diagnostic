@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
+import HealthCheckupHero from "../components/HealthCheckupHero";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -12,9 +13,9 @@ import img4 from "../assets/Images/HomeImg4.jpg";
 import bloodTest from "../assets/Images/bloodTest.jpg";
 import bg from "../assets/Images/bg.jpg";
 
-import lipid from "../assets/Images/lipid.jpg"
-import diabetes from "../assets/Images/diabetes.jpg"
-import harmon from "../assets/Images/harmon.jpg"
+import lipid from "../assets/Images/lipid.jpg";
+import diabetes from "../assets/Images/diabetes.jpg";
+import harmon from "../assets/Images/harmon.jpg";
 
 import package1 from "../assets/Images/packages/package1.jpg";
 import package2 from "../assets/Images/packages/package2.jpg";
@@ -30,7 +31,7 @@ import card1 from "../assets/Images/card1.png";
 import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
-import  ContactForm from "../components/ContactForm"
+import ContactForm from "../components/ContactForm";
 
 import Card from "../components/Card";
 import Location from "../components/Location";
@@ -38,34 +39,36 @@ import Location from "../components/Location";
 const data = [
   {
     img: img1,
-    heading: "Fully Automated Computerized Lab",
-    subHeading: "Accurate, Fast & Reliable Reports at Affordable Prices",
+    heading: "Advanced Computerized Diagnostic Laboratory",
+    subHeading:
+      "Experience high-precision testing with our fully automated lab systems for faster and more dependable medical reports.",
   },
   {
     img: img2,
-    heading: "Special Discount for Walk-in Patients",
+    heading: "Special Discounts for In-House Lab Visits",
     subHeading:
-      "Get a 20% discount on all tests. Premium members enjoy a 25% discount with QR code enabled reports.",
+      "Avail flat 20% off on all pathology tests. Premium members receive up to 25% off and access to secure QR-coded digital reports.",
   },
   {
     img: img3,
-    heading: "Wide Range of Diagnostic Tests",
+    heading: "All-Inclusive Diagnostic Test Facility",
     subHeading:
-      "Comprehensive testing menu including pathology, radiology, cardiology, and more.",
+      "Offering a complete range of lab tests including pathology, imaging, cardiology, and specialized screenings — all under one roof.",
   },
   {
     img: img4,
-    heading: "Exclusive Health Checkup Packages",
+    heading: "Customized Preventive Health Packages",
     subHeading:
-      "Explore our tailored health checkup packages designed for different age groups and health needs.",
+      "Choose from our curated health checkup plans for men, women, seniors, and corporate employees — designed for proactive wellness monitoring.",
   },
 ];
+
 const cardData = [
   {
-    title: "Haematology",
+    title: "Haematology Profile",
     description:
-      "Haematology is the branch of medicine that deals with the study of blood, the blood-forming organs, and blood-related diseases. It encompasses a wide range of tests that help diagnose conditions such as anemia, infections, clotting disorders, and blood cancers.",
-    img: img1, // Replace with actual image path or import
+      "The Haematology Profile encompasses critical blood tests that analyze red and white blood cells, hemoglobin, platelets, and other parameters essential for diagnosing blood-related conditions.",
+    img: img1,
     price: 1500,
     components: [
       "Complete Blood Count (CBC)",
@@ -77,18 +80,18 @@ const cardData = [
       "Peripheral Blood Smear",
     ],
     importance:
-      "Haematology tests are vital for diagnosing a wide array of disorders including anemia, leukemia, infections, clotting issues, and immune system dysfunctions. These tests form the basis of routine health assessments.",
+      "These tests are instrumental in identifying anemia, blood cancers, infections, immune disorders, and clotting abnormalities, making them a core part of routine diagnostics.",
     recommendedWhen:
-      "These tests are recommended for general health checkups, unexplained fatigue, frequent infections, bruising or bleeding, or to monitor ongoing treatment for blood disorders.",
+      "Ideal for patients experiencing fatigue, recurrent infections, easy bruising, or as part of a comprehensive health assessment.",
     patientPreparation:
-      "No specific preparation is usually required. However, it’s advised to inform the healthcare provider about any medications being taken as they may affect blood parameters.",
+      "Generally, no fasting is needed. Inform your doctor about any ongoing medications that could influence blood readings.",
     interpretation:
-      "• Low hemoglobin or RBC may indicate anemia. \n• High WBC count could suggest an infection. \n• Low platelet count might indicate a bleeding disorder. \n• Abnormal cells in the blood smear may be a sign of leukemia or other bone marrow diseases.\n\nA comprehensive interpretation should always be done by a physician based on symptoms and medical history.",
+      "• Anemia may reflect low hemoglobin or RBC count.\n• Elevated WBC may suggest infection.\n• Low platelets could signal a bleeding disorder.\n• Abnormal cells on smear might point to serious conditions like leukemia.",
   },
   {
-    title: "Liver Function Test (LFT)",
+    title: "Comprehensive Liver Function Panel",
     description:
-      "LFTs assess the health and functionality of your liver by measuring enzymes, proteins, and substances produced or excreted by the liver.",
+      "This test evaluates key liver enzymes, proteins, and bilirubin levels to monitor liver performance and detect diseases like hepatitis or fatty liver.",
     img: img2,
     price: 2500,
     components: [
@@ -96,210 +99,220 @@ const cardData = [
       "Aspartate transaminase (AST)",
       "Alkaline phosphatase (ALP)",
       "Gamma-glutamyl transferase (GGT)",
-      "Total and direct bilirubin",
+      "Total and Direct Bilirubin",
       "Albumin",
-      "Prothrombin time (PT/INR)",
+      "Prothrombin Time (PT/INR)",
     ],
     importance:
-      "LFTs help detect liver infections, monitor the progression of liver diseases, and evaluate the effectiveness of treatments.",
+      "Early detection of liver issues is crucial for preventing complications. LFTs help monitor chronic liver disease and evaluate treatment outcomes.",
     recommendedWhen:
-      "Advised for individuals with symptoms like jaundice, fatigue, or abdominal pain, and those with a history of liver disease or alcohol abuse.",
+      "Advised for those with symptoms like yellowing of eyes, fatigue, unexplained weight loss, or a history of alcohol use or hepatitis.",
     patientPreparation:
-      "Fasting may be required. Inform your doctor about any medications you're taking.",
+      "Fasting may be advised. Always share details of any medication or supplement intake with your healthcare provider.",
     interpretation:
-      "Elevated ALT and AST levels may indicate liver damage. High bilirubin can suggest bile duct issues or liver dysfunction.",
+      "High ALT/AST values often indicate liver inflammation. Elevated bilirubin may suggest liver blockage or damage. Low albumin points to impaired liver synthesis.",
   },
   {
-    title: "Kidney Function Test (KFT)",
+    title: "Kidney Health Evaluation (KFT)",
     description:
-      "KFTs evaluate how well your kidneys are filtering waste from your blood and maintaining fluid and electrolyte balance.",
+      "Kidney Function Tests (KFT) assess the kidney’s ability to remove waste, balance fluids, and regulate electrolytes—vital for maintaining health.",
     img: img3,
     price: 2000,
     components: [
-      "Serum creatinine",
-      "Blood urea nitrogen (BUN)",
-      "Estimated glomerular filtration rate (eGFR)",
-      "Electrolytes (sodium, potassium, chloride)",
+      "Serum Creatinine",
+      "Blood Urea Nitrogen (BUN)",
+      "eGFR (Estimated Glomerular Filtration Rate)",
+      "Electrolytes (Sodium, Potassium, Chloride)",
       "Urinalysis",
     ],
     importance:
-      "Essential for detecting kidney diseases, monitoring kidney function, and guiding treatment decisions.",
+      "These tests are vital for diagnosing chronic kidney disease, detecting dehydration, and monitoring renal function in patients with diabetes or hypertension.",
     recommendedWhen:
-      "Recommended for individuals with high blood pressure, diabetes, or symptoms like swelling, fatigue, or frequent urination.",
+      "Recommended for individuals with high BP, diabetes, swelling in legs, frequent urination, or family history of kidney issues.",
     patientPreparation:
-      "Fasting might be necessary. Stay hydrated but avoid excessive fluid intake before the test.",
+      "Fasting may be suggested. Maintain hydration but avoid excess fluid intake before the test.",
     interpretation:
-      "High creatinine and BUN levels can indicate impaired kidney function. Abnormal electrolyte levels may suggest kidney-related issues.",
+      "Elevated creatinine or BUN may signal kidney dysfunction. Abnormal eGFR indicates declining filtration ability. Electrolyte imbalances may indicate renal stress.",
   },
   {
-    title: "Lipid Profile",
+    title: "Lipid Panel – Cholesterol & Heart Health",
     description:
-      "A lipid profile measures the levels of specific fats in your blood to assess your risk of cardiovascular disease.",
+      "A complete lipid profile helps assess your risk for heart disease by measuring different types of fats and cholesterol in the blood.",
     img: lipid,
     price: 1800,
     components: [
-      "Total cholesterol",
-      "Low-density lipoprotein (LDL)",
-      "High-density lipoprotein (HDL)",
+      "Total Cholesterol",
+      "LDL (Bad Cholesterol)",
+      "HDL (Good Cholesterol)",
       "Triglycerides",
-      "Very low-density lipoprotein (VLDL)",
-      "Cholesterol/HDL ratio",
+      "VLDL",
+      "Cholesterol/HDL Ratio",
     ],
     importance:
-      "Helps in evaluating the risk of heart disease and guiding dietary and lifestyle interventions.",
+      "Understanding your lipid levels helps predict heart attack and stroke risks, and guide treatment for high cholesterol or metabolic syndrome.",
     recommendedWhen:
-      "Advised for adults over 20 years old, especially those with risk factors like smoking, obesity, or a family history of heart disease.",
+      "Essential for adults aged 20+ and those with obesity, diabetes, smoking habits, or a family history of heart disease.",
     patientPreparation:
-      "Fasting for 9–12 hours is typically required. Only water is permitted during the fasting period.",
+      "Fasting for 9–12 hours is typically required. Drink only water during this period.",
     interpretation:
-      "High LDL and triglyceride levels increase heart disease risk, while high HDL levels are protective.",
+      "High LDL and triglycerides increase cardiovascular risk. High HDL is protective. A higher cholesterol/HDL ratio may suggest elevated heart disease risk.",
   },
   {
-    title: "Diabetes Profile",
+    title: "Diabetes Monitoring Profile",
     description:
-      "This profile assesses blood sugar control and helps in diagnosing and monitoring diabetes.",
+      "This test panel measures blood glucose levels and long-term sugar control indicators to diagnose and manage diabetes effectively.",
     img: diabetes,
     price: 2200,
     components: [
-      "Fasting blood glucose",
-      "Postprandial blood glucose",
-      "Hemoglobin A1c (HbA1c)",
-      "Random blood sugar",
-      "Insulin levels",
+      "Fasting Blood Sugar (FBS)",
+      "Post-Meal Blood Sugar (PPBS)",
+      "HbA1c (Glycated Hemoglobin)",
+      "Random Blood Glucose",
+      "Fasting Insulin",
     ],
     importance:
-      "Crucial for diagnosing diabetes, monitoring blood sugar control, and preventing complications.",
+      "Detects early signs of diabetes, evaluates glucose control, and helps prevent complications like neuropathy or kidney disease.",
     recommendedWhen:
-      "Recommended for individuals with symptoms like increased thirst, frequent urination, or unexplained weight loss, and those with risk factors like obesity or a family history of diabetes.",
+      "Recommended for individuals with risk factors like obesity, family history, frequent urination, excessive thirst, or weight loss.",
     patientPreparation:
-      "Fasting for at least 8 hours is required for certain tests. Follow your doctor's instructions regarding medication intake.",
+      "Fasting for at least 8 hours is required. Follow medical instructions for any antidiabetic drugs.",
     interpretation:
-      "Elevated fasting glucose and HbA1c levels indicate poor blood sugar control and a higher risk of diabetes-related complications.",
+      "High FBS or PPBS indicates poor glucose regulation. HbA1c offers an average of glucose levels over 3 months and is crucial for long-term monitoring.",
   },
   {
-    title: "Fine Needle Aspiration Cytology (FNAC)",
+    title: "FNAC – Fine Needle Aspiration Cytology",
     description:
-      "FNAC is a diagnostic procedure where a thin needle is used to extract cells from a lump or mass for microscopic examination.",
+      "FNAC is a quick and minimally invasive diagnostic technique that examines cellular samples from lumps or swellings to identify infections or malignancies.",
     img: img1,
     price: 3000,
-    components: ["Cellular morphology assessment", "Cytopathological analysis"],
+    components: ["Microscopic Cell Analysis", "Cytological Evaluation"],
     importance:
-      "Helps in diagnosing infections, inflammatory conditions, and cancers with minimal invasiveness.",
+      "Useful for detecting infections, inflammatory conditions, or tumors, especially in the thyroid, breast, or lymph nodes.",
     recommendedWhen:
-      "Suggested when a patient has a palpable lump or mass in areas like the neck, breast, or thyroid.",
+      "Advised when lumps, nodules, or swellings appear in accessible areas like the neck or breasts for early diagnosis.",
     patientPreparation:
-      "Inform your doctor about any medications or bleeding disorders. Specific preparation may vary based on the biopsy site.",
+      "Discuss any medication use or bleeding tendencies with your doctor. Preparation may depend on the site of aspiration.",
     interpretation:
-      "Results can indicate benign conditions, infections, or malignancies, guiding further management.",
+      "Results may show normal, benign, or malignant cells. A pathologist will guide the need for further biopsy or imaging.",
   },
   {
-    title: "Vitamin D and B12 Tests",
+    title: "Vitamin D & B12 Status",
     description:
-      "These tests measure the levels of Vitamin D and Vitamin B12 in your blood, essential nutrients for bone health and nerve function.",
+      "This panel evaluates the body's levels of Vitamin D and B12, essential for bone strength, red blood cell formation, and neurological health.",
     img: img2,
     price: 2000,
-    components: ["25-hydroxyvitamin D", "Vitamin B12 (cobalamin)"],
+    components: ["25-Hydroxy Vitamin D", "Vitamin B12 (Cobalamin)"],
     importance:
-      "Detects deficiencies that can lead to bone disorders, fatigue, neurological issues, and anemia.",
+      "Crucial for diagnosing deficiencies that can lead to fatigue, osteoporosis, numbness, and cognitive changes.",
     recommendedWhen:
-      "Advised for individuals with symptoms like fatigue, bone pain, or tingling sensations, and those at risk of deficiencies.",
+      "Recommended for patients with symptoms like tiredness, brittle bones, depression, or frequent illnesses.",
     patientPreparation:
-      "Fasting may be required. Inform your doctor about any supplements you're taking.",
+      "Fasting may be advised. Share supplement intake details with your physician.",
     interpretation:
-      "Low Vitamin D levels can lead to bone disorders, while low B12 levels can cause anemia and neurological problems.",
+      "Low Vitamin D can lead to rickets or osteoporosis. Low B12 may cause megaloblastic anemia and nerve damage.",
   },
   {
-    title: "Hormone Tests",
+    title: "Hormonal Imbalance Screening",
     description:
-      "Hormone tests evaluate the levels of various hormones in your body to assess endocrine function.",
+      "This comprehensive test panel examines hormone levels to detect issues in thyroid, adrenal, reproductive, or pituitary functions.",
     img: harmon,
     price: 3500,
     components: [
-      "Thyroid hormones (TSH, T3, T4)",
-      "Sex hormones (estrogen, testosterone)",
+      "TSH, T3, T4",
+      "Estrogen & Testosterone",
       "Cortisol",
       "Insulin",
-      "Growth hormone",
+      "Growth Hormone",
     ],
     importance:
-      "Helps in diagnosing hormonal imbalances, thyroid disorders, adrenal issues, and reproductive problems.",
+      "Hormone fluctuations can affect metabolism, reproduction, mood, and growth. Early detection ensures timely treatment.",
     recommendedWhen:
-      "Recommended for individuals with symptoms like fatigue, weight changes, menstrual irregularities, or infertility.",
+      "Indicated in cases of infertility, weight gain/loss, mood swings, menstrual irregularities, or fatigue.",
     patientPreparation:
-      "Fasting may be required for certain tests. Timing of the test may be crucial; follow your doctor's instructions.",
+      "Timing of tests may be important. Fasting might be needed. Always follow the physician’s advice on medication timing.",
     interpretation:
-      "Abnormal hormone levels can indicate various endocrine disorders requiring medical intervention. For example, elevated TSH may suggest hypothyroidism, while high cortisol could indicate Cushing’s syndrome.",
+      "Abnormal thyroid hormones suggest thyroid dysfunction. Imbalanced sex hormones may indicate PCOS or low testosterone. Elevated cortisol can hint at stress or Cushing’s syndrome.",
   },
   {
-    title: "Urine and Sputum Examinations",
+    title: "Urine and Sputum Diagnostics",
     description:
-      "These tests help detect infections, kidney issues, and respiratory conditions by analyzing urine and sputum samples for abnormal cells, bacteria, or chemical substances.",
+      "Urine and sputum tests help detect infections, kidney issues, and respiratory diseases by analyzing fluid samples under a microscope and through cultures.",
     img: img3,
     price: 1600,
     components: [
-      "Urinalysis (physical, chemical, and microscopic analysis)",
-      "Urine culture and sensitivity",
-      "Sputum smear microscopy (for tuberculosis and infections)",
-      "Sputum culture",
+      "Urinalysis (Physical, Chemical, Microscopic)",
+      "Urine Culture & Sensitivity",
+      "Sputum Smear (AFB/TB)",
+      "Sputum Culture",
     ],
     importance:
-      "Essential for diagnosing urinary tract infections (UTIs), kidney disorders, tuberculosis, pneumonia, and other respiratory diseases.",
+      "Essential for diagnosing UTIs, pneumonia, tuberculosis, and monitoring existing conditions affecting the kidneys or lungs.",
     recommendedWhen:
-      "Suggested for individuals showing symptoms like painful urination, frequent urination, blood in urine, chronic cough, or sputum production.",
+      "Recommended for symptoms like painful urination, blood in urine, persistent cough, or sputum production.",
     patientPreparation:
-      "For urine test: Collect midstream clean-catch urine in a sterile container. For sputum: Best collected early morning before eating or drinking, after rinsing the mouth.",
+      "Midstream clean-catch sample for urine. Early morning deep-cough sputum sample is ideal after oral hygiene.",
     interpretation:
-      "Presence of bacteria, white or red blood cells in urine indicates infection or inflammation. In sputum, detection of Mycobacterium tuberculosis confirms TB; presence of neutrophils or pathogens suggests respiratory infections.",
+      "White blood cells in urine suggest infection. Sputum cultures may detect TB or pneumonia-causing pathogens. Blood or pus cells indicate active inflammation.",
   },
 ];
+
 const packages = [
   {
     img: package1,
-    title: "BASIC WELLNESS PACKAGE",
-    tests: " CBC, BSF, LFT, KFT, LIPID PROFILE, TFT, URINE ROUTINE EXAMINATION",
+    title: "Essential Health Screening Package",
+    description:
+      "Ideal for routine health checkups, this package includes vital tests to assess liver, kidney, heart, and thyroid function, along with complete blood and urine analysis.",
+    tests: "CBC, BSF, LFT, KFT, LIPID PROFILE, TFT, URINE ROUTINE EXAMINATION",
     ActualPrice: 2620,
     OfferPrice: 1199,
     rating: 4.5,
   },
   {
     img: package2,
-    title: "ADVANCE WELLNESS PACKAGE",
-    tests:
-      "CBC, HBA1C, BSF, LFT, KFT, LIPID PROFILE, TFT, URINE, ROUTINE EXAMINATION",
+    title: "Comprehensive Wellness Checkup",
+    description:
+      "A perfect package for those looking to monitor chronic conditions like diabetes and thyroid imbalance, with advanced screening and blood glucose monitoring.",
+    tests: "CBC, HBA1C, BSF, LFT, KFT, LIPID PROFILE, TFT, URINE, ROUTINE EXAMINATION",
     ActualPrice: 3170,
     OfferPrice: 1499,
     rating: 4.0,
   },
   {
     img: package3,
-    title: "ANNUAL WELLNESS PACKAGE",
-    tests:
-      "CBC, BSF, LFT, KFT, LIPID PROFILE, TFT, VITAMIN D3, VITAMIN B12,URINE ROUTINE EXAMINATION",
+    title: "Annual Preventive Health Package",
+    description:
+      "Designed for yearly monitoring of vital organs and nutritional levels, this package helps detect deficiencies and chronic conditions early.",
+    tests: "CBC, BSF, LFT, KFT, LIPID PROFILE, TFT, VITAMIN D3, VITAMIN B12, URINE ROUTINE EXAMINATION",
     ActualPrice: 5070,
     OfferPrice: 2499,
     rating: 4.5,
   },
   {
     img: package5,
-    title: "ADVANCE ANNUAL WELLNESS PACKAGE",
-    tests:
-      "CBC, HBA1C,BSF, LFT, KFT, LIPID PROFILE, TFT, VITAMIN D3, VITAMIN B12,URINE ROUTINE EXAMINATION",
+    title: "Advanced Annual Health Screening",
+    description:
+      "A powerful diagnostic combo for yearly health tracking, this package covers diabetes, organ function, and vitamin levels for a comprehensive overview.",
+    tests: "CBC, HBA1C, BSF, LFT, KFT, LIPID PROFILE, TFT, VITAMIN D3, VITAMIN B12, URINE ROUTINE EXAMINATION",
     ActualPrice: 5620,
     OfferPrice: 2699,
     rating: 3.8,
   },
   {
     img: package6,
-    title: "COMPLETE WELLNESS PACKAGE",
+    title: "Total Body Wellness Package",
+    description:
+      "Our most detailed package for complete health evaluation. Includes infectious disease screening, hormonal balance, vitamin levels, and organ health.",
     tests:
-      " CBC, HBA1C, BSF, LFT, KFT, LIPID PROFILE, TFT, VITAMIN D3, VITAMIN B12, HIV, HCV, HbsAg, URINE, ROUTINE EXAMINATION",
+      "CBC, HBA1C, BSF, LFT, KFT, LIPID PROFILE, TFT, VITAMIN D3, VITAMIN B12, HIV, HCV, HbsAg, URINE, ROUTINE EXAMINATION",
     ActualPrice: 7420,
     OfferPrice: 3499,
     rating: 4.5,
   },
   {
     img: package4,
-    title: "ANTENATAL PACKAGE",
+    title: "Antenatal Health Check Package",
+    description:
+      "Specially designed for expecting mothers, this package ensures comprehensive prenatal screening to support a healthy pregnancy.",
     tests:
       "CBC, BLOOD GROUP, BSR, HIV, HbsAg, HCV, VDRL, TFT, URINE ROUTINE EXAMINATION",
     ActualPrice: 2670,
@@ -308,162 +321,177 @@ const packages = [
   },
   {
     img: package7,
-    title: "DIABETIC WELLNESS PACKAGE",
-    tests: "BSF, BSPP, HBA1C, URINE ROUTINE EXAMINATION,",
+    title: "Diabetes Care Monitoring Package",
+    description:
+      "A focused wellness package for individuals with diabetes or those at risk. Helps monitor glucose levels and manage diabetic health.",
+    tests: "BSF, BSPP, HBA1C, URINE ROUTINE EXAMINATION",
     ActualPrice: 840,
     OfferPrice: 499,
     rating: 4.8,
   },
 ];
 
-const Slide = ({ img, heading, subHeading,setShowForm }) => {
- 
+
+const Slide = ({ img, heading, subHeading, setShowForm }) => {
   return (
-  <>
+    <>
+      <div className="relative w-full h-[35rem]">
+        <img src={img} className="w-full h-full object-cover" alt={heading} />
+        <div className="absolute space-y-4 inset-0 bg-white/10 flex flex-col items-center justify-center text-white px-4 text-center z-10">
+          <img src={logo} className=" h-10"></img>
+          <h1 className="text-4xl md:text-7xl font-ralewayB mb-2 text-[#a01a5a] [text-shadow:_2px_5px_2px_rgba(255,255,255,0.8)]">
+            {heading}
+          </h1>
 
-    <div className="relative w-full h-[35rem]">
-      <img src={img} className="w-full h-full object-cover" alt={heading} />
-      <div className="absolute space-y-4 inset-0 bg-black/40 flex flex-col items-center justify-center text-white px-4 text-center z-10">
-        <img src={logo} className=" h-10"></img>
-        <h1 className="text-4xl md:text-7xl font-ralewayB mb-2 text-[#f0ffb6] [text-shadow:_2px_2px_4px_rgba(0,0,0,0.7)]">
-          {heading}
-        </h1>
+          <p className="text-lg md:text-2xl [text-shadow:_2px_2px_4px_rgba(0,0,0,0.8)]">
+            {subHeading}
+          </p>
 
-        <p className="text-lg md:text-xl">{subHeading}</p>
-
-        <button   onClick={() => setShowForm(true)} className="flex items-center hover:bg-black/80 bg-white cursor-pointer p-2 rounded border-gray-400 group">
-          <CiBookmark className="w-10 h-6 cursor-pointer group-hover:text-white text-black" />
-          <span className="group-hover:text-white font-ralewayB text-black">
-            Book Your AppointMent
-          </span>
-        </button>
+          <button
+            onClick={() => setShowForm(true)}
+            className="flex items-center hover:bg-black/80 bg-[#a01a5a] cursor-pointer p-2 rounded border-gray-400 group"
+          >
+            <CiBookmark className="w-10 h-6 cursor-pointer group-hover:text-white text-white" />
+            <span className="group-hover:text-white font-ralewayB text-white">
+              Book Your AppointMent
+            </span>
+          </button>
+        </div>
       </div>
-    </div>
     </>
   );
 };
 
 const Home = () => {
   const [showAll, setShowAll] = useState(false);
-    const [showForm, setShowForm] = useState(false);
+  const [showForm, setShowForm] = useState(false);
   return (
     <>
-          {showForm && <ContactForm onClose={() => setShowForm(false)} />}
-    <div className="bg-white">
-      <Swiper
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
-        loop={true}
-        modules={[Autoplay]}
-        className="w-full h-full"
-      >
-        {data.map((slideData, index) => (
-          <SwiperSlide key={index} className="relative">
-            <Slide {...slideData} setShowForm={setShowForm} />
-          </SwiperSlide>
-        ))}
-      </Swiper>
+      {showForm && <ContactForm onClose={() => setShowForm(false)} />}
+      <div className="bg-white">
+        <Swiper
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          loop={true}
+          modules={[Autoplay]}
+          className="w-full h-full"
+        >
+          {data.map((slideData, index) => (
+            <SwiperSlide key={index} className="relative">
+              <Slide {...slideData} setShowForm={setShowForm} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        <HealthCheckupHero />
+        <hr className="text-[#a01a5a]"></hr>
+        <div className="flex w-[98%] md:w-[80%] mx-auto shadow-2xl rounded-3xl  my-10 md:my-32">
+          <div className="space-y-4.5 border rounded-l-3xl p-4 px-5 border-[#e3f4a0]/30 md:w-[50%]">
+            <h1 className="text-6xl md:text-7xl font-ralewayB text-[#a01a5a]">
+              Olek Diagnostics
+            </h1>
+            <h1 className="text-2xl  font-ralewayB  text-[#a01a5a]">
+              Trusted Pathology Lab in Dehradun
+            </h1>
+            <div className="w-[100%]">
+              <img
+                src={bloodTest}
+                className="md:hidden w-full md:h-[25rem] object-cover"
+                alt="Olek Diagnostics Blood Test"
+              />
+            </div>
 
-      <div className="flex w-[98%] md:w-[80%] mx-auto shadow-2xl rounded-3xl  my-10 md:my-32">
-        <div className="space-y-4.5 border rounded-l-3xl  p-4 px-5 border-[#e3f4a0]/30 md:w-[50%]">
-          <h1 className="text-6xl md:text-7xl font-ralewayB text-[#005b4c]">
-            Olek Diagnostics
-          </h1>
-          <h1 className=" text-2xl md:text-3xl font-ralewayB md:font-ralewaySb text-[#005b4c]">
-            Your Health, Our Priority
-          </h1>
-          <div className=" w-[100%]">
+            <p className="font-ralewayM text-gray-600">
+              Welcome to Olek Diagnostics — a leading diagnostic center in
+              Dehradun, Uttarakhand, dedicated to providing accurate, fast, and
+              affordable pathology services. From routine blood tests to
+              advanced health screenings, we use cutting-edge technology and
+              certified labs to deliver reliable results. Our facility is
+              designed for patient comfort, ensuring a hygienic and stress-free
+              environment. Whether you're booking a CBC, lipid profile, LFT, or
+              full body check-up, your health is always our top priority.
+            </p>
+
+            <button
+              onClick={() => setShowForm(true)}
+              className="flex items-center border hover:bg-[rgba(255,164,208,1)] cursor-pointer p-2 rounded border-gray-400 group"
+            >
+              <CiBookmark className="w-10 h-6 cursor-pointer text-[#a01a5a]" />
+              <span className="text-[#a01a5a] font-ralewaySb">Book Now</span>
+            </button>
+          </div>
+
+          <div className="hidden md:block w-[50%]">
             <img
               src={bloodTest}
-              className="md:hidden w-full  md:h-[25rem] object-cover"
+              className="w-full h-[25rem] object-cover"
             ></img>
           </div>
-
-          <p className="font-ralewayM text-gray-600">
-            At Olek Diagnostics in Dehradun, Uttarakhand, your comfort is
-            paramount. Our state-of-the-art clinic is thoughtfully designed with
-            modern equipment and an ergonomic layout. We are dedicated to
-            providing the best diagnostic services in a relaxed and hygienic
-            atmosphere, ensuring a stress-free experience. Trust our rich
-            expertise for quality healthcare that’s both thorough and
-            simplified.
-          </p>
-          <button   onClick={() => setShowForm(true)} className="flex items-center border hover:bg-[#dff391] cursor-pointer p-2 rounded border-gray-400 group">
-            <CiBookmark className="w-10 h-6 cursor-pointer text-[#005b4c] " />
-            <span className="text-[#005b4c] font-ralewaySb ">
-              Book Now
-            </span>{" "}
-          </button>
         </div>
-        <div className="hidden md:block w-[50%]">
-          <img src={bloodTest} className="w-full h-[25rem] object-cover"></img>
-        </div>
-      </div>
 
-      <div className="flex flex-col mt-20 space-y-6">
-        <h1 className="text-center text-4xl font-ralewayB text-[#005b4c]">
-          Our Services
+        <div className="flex flex-col mt-20 space-y-6">
+          <h1 className="text-center text-4xl font-ralewayB text-[#a01a5a]">
+            Our Services
+          </h1>
+          <div className="text-center py-6 bg-[rgba(255,164,208,0.2)]">
+            <div
+              className={`flex flex-wrap gap-2 md:gap-8 justify-center overflow-hidden transition-all duration-500 ${
+                showAll ? "max-h-[1000rem]" : "max-h-[36rem]"
+              }`}
+            >
+              {cardData.map((item, index) => (
+                <Card type={'services'} data={item} key={index} />
+              ))}
+            </div>
+
+            <button
+              onClick={() => setShowAll((prev) => !prev)}
+              className="mt-10 px-6 cursor-pointer py-2 flex md:w-2/12 space-x-1.5 m-auto justify-center items-center text-[#a01a5a] bg-[rgba(255,164,208,1)]  transition rounded-md"
+            >
+              {showAll ? <IoIosArrowUp /> : <IoIosArrowDown />}
+              <span className="font-ralewaySb">
+                {" "}
+                {showAll ? "Show Less" : "Show More"}
+              </span>
+            </button>
+          </div>
+        </div>
+        <div>
+          <img src={bg} className="w-full h-72 object-cover rotate-180"></img>
+        </div>
+        <h1 className="text-center  text-4xl font-ralewayB text-[#a01a5a]">
+          Health & Wellness Packages
         </h1>
-        <div className="text-center py-6 bg-[#005b4c]">
-          <div
-            className={`flex flex-wrap gap-2 md:gap-8 justify-center overflow-hidden transition-all duration-500 ${
-              showAll ? "max-h-[1000rem]" : "max-h-[36rem]"
-            }`}
-          >
-            {cardData.map((item, index) => (
-              <Card data={item} key={index} />
-            ))}
-          </div>
+        <div className="flex flex-col  space-y-6">
+          <div className="text-center py-6 bg-[rgba(255,164,208,0.2)]">
+            <div
+              className={`flex flex-wrap gap-2 md:gap-8 justify-center overflow-hidden transition-all duration-500 ${
+                showAll ? "max-h-[1000rem]" : "max-h-[36rem]"
+              }`}
+            >
+              {packages.map((item, index) => (
+                <Card type={'packages'} data={item} key={index} />
+              ))}
+            </div>
 
-          <button
-            onClick={() => setShowAll((prev) => !prev)}
-            className="mt-10 px-6 cursor-pointer py-2 flex md:w-2/12 space-x-1.5 m-auto justify-center items-center text-[#005b4c] bg-[#dff391]  transition rounded-md"
-          >
-            {showAll ? <IoIosArrowUp /> : <IoIosArrowDown />}
-            <span className="font-ralewaySb">
-              {" "}
-              {showAll ? "Show Less" : "Show More"}
-            </span>
-          </button>
+            <button
+              onClick={() => setShowAll((prev) => !prev)}
+              className="mt-10 px-6 cursor-pointer py-2 flex md:w-2/12 space-x-1.5 m-auto justify-center items-center text-[#a01a5a] bg-[rgba(255,164,208,1)]  transition rounded-md"
+            >
+              {showAll ? <IoIosArrowUp /> : <IoIosArrowDown />}
+              <span className="font-ralewaySb">
+                {" "}
+                {showAll ? "Show Less" : "Show More"}
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <div>
+          <TestimonialSwiper />
+        </div>
+        <div>
+          <Location />
         </div>
       </div>
-      <div>
-        <img src={bg} className="w-full h-72 object-cover rotate-180"></img>
-      </div>
-      <h1 className="text-center  text-4xl font-ralewayB text-[#005b4c]">
-        Health & Wellness Packages
-      </h1>
-      <div className="flex flex-col  space-y-6">
-        <div className="text-center py-6 bg-[#005b4c]">
-          <div
-            className={`flex flex-wrap gap-2 md:gap-8 justify-center overflow-hidden transition-all duration-500 ${
-              showAll ? "max-h-[1000rem]" : "max-h-[36rem]"
-            }`}
-          >
-            {packages.map((item, index) => (
-              <Card data={item} key={index} />
-            ))}
-          </div>
-
-          <button
-            onClick={() => setShowAll((prev) => !prev)}
-            className="mt-10 px-6 cursor-pointer py-2 flex md:w-2/12 space-x-1.5 m-auto justify-center items-center text-[#005b4c] bg-[#dff391]  transition rounded-md"
-          >
-            {showAll ? <IoIosArrowUp /> : <IoIosArrowDown />}
-            <span className="font-ralewaySb">
-              {" "}
-              {showAll ? "Show Less" : "Show More"}
-            </span>
-          </button>
-        </div>
-      </div>
-
-      <div>
-        <TestimonialSwiper />
-      </div>
-      <div>
-        <Location />
-      </div>
-    </div>
     </>
   );
 };

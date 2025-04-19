@@ -42,7 +42,7 @@ const TestimonialSwiper = () => {
   return (
     <div className="bg-gray-50 py-10 md:py-32 px-4 md:px-12 lg:px-32">
       <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-[#005b4c] mb-2 animate-fadeInUp">
+        <h2 className="text-4xl font-bold text-[#a01a5a] mb-2 animate-fadeInUp">
           What Our Patients Say
         </h2>
         <p className="text-gray-600 animate-fadeInUp delay-100">
@@ -66,10 +66,14 @@ const TestimonialSwiper = () => {
         {testimonials.map((review, index) => (
           <SwiperSlide key={index}>
             <div className="bg-white m-2 rounded-2xl shadow-xl p-6 flex flex-col justify-between h-full transition-transform hover:scale-105 duration-300">
-              <FaQuoteLeft className="text-4xl text-[#005b4c] mb-4" />
-              <p className="text-gray-700 text-base leading-relaxed mb-6">{review.comment}</p>
+              <FaQuoteLeft className="text-4xl text-[#a01a5a] mb-4" />
+              <p className="text-gray-700 text-base leading-relaxed mb-6">
+                {review.comment}
+              </p>
               <div>
-                <h4 className="font-semibold text-lg text-[#363d17]">{review.name}</h4>
+                <h4 className="font-semibold text-lg text-[#363d17]">
+                  {review.name}
+                </h4>
                 <div className="flex gap-1 mt-1">
                   {[...Array(5)].map((_, i) => (
                     <FaStar

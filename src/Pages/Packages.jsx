@@ -20,51 +20,60 @@ const Packages = () => {
 const packages = [
   {
     img: package1,
-    title: "BASIC WELLNESS PACKAGE",
-    tests: " CBC, BSF, LFT, KFT, LIPID PROFILE, TFT, URINE ROUTINE EXAMINATION",
+    title: "Essential Health Screening Package",
+    description:
+      "Ideal for routine health checkups, this package includes vital tests to assess liver, kidney, heart, and thyroid function, along with complete blood and urine analysis.",
+    tests: "CBC, BSF, LFT, KFT, LIPID PROFILE, TFT, URINE ROUTINE EXAMINATION",
     ActualPrice: 2620,
     OfferPrice: 1199,
     rating: 4.5,
   },
   {
     img: package2,
-    title: "ADVANCE WELLNESS PACKAGE",
-    tests:
-      "CBC, HBA1C, BSF, LFT, KFT, LIPID PROFILE, TFT, URINE, ROUTINE EXAMINATION",
+    title: "Comprehensive Wellness Checkup",
+    description:
+      "A perfect package for those looking to monitor chronic conditions like diabetes and thyroid imbalance, with advanced screening and blood glucose monitoring.",
+    tests: "CBC, HBA1C, BSF, LFT, KFT, LIPID PROFILE, TFT, URINE, ROUTINE EXAMINATION",
     ActualPrice: 3170,
     OfferPrice: 1499,
     rating: 4.0,
   },
   {
     img: package3,
-    title: "ANNUAL WELLNESS PACKAGE",
-    tests:
-      "CBC, BSF, LFT, KFT, LIPID PROFILE, TFT, VITAMIN D3, VITAMIN B12,URINE ROUTINE EXAMINATION",
+    title: "Annual Preventive Health Package",
+    description:
+      "Designed for yearly monitoring of vital organs and nutritional levels, this package helps detect deficiencies and chronic conditions early.",
+    tests: "CBC, BSF, LFT, KFT, LIPID PROFILE, TFT, VITAMIN D3, VITAMIN B12, URINE ROUTINE EXAMINATION",
     ActualPrice: 5070,
     OfferPrice: 2499,
     rating: 4.5,
   },
   {
     img: package5,
-    title: "ADVANCE ANNUAL WELLNESS PACKAGE",
-    tests:
-      "CBC, HBA1C,BSF, LFT, KFT, LIPID PROFILE, TFT, VITAMIN D3, VITAMIN B12,URINE ROUTINE EXAMINATION",
+    title: "Advanced Annual Health Screening",
+    description:
+      "A powerful diagnostic combo for yearly health tracking, this package covers diabetes, organ function, and vitamin levels for a comprehensive overview.",
+    tests: "CBC, HBA1C, BSF, LFT, KFT, LIPID PROFILE, TFT, VITAMIN D3, VITAMIN B12, URINE ROUTINE EXAMINATION",
     ActualPrice: 5620,
     OfferPrice: 2699,
     rating: 3.8,
   },
   {
     img: package6,
-    title: "COMPLETE WELLNESS PACKAGE",
+    title: "Total Body Wellness Package",
+    description:
+      "Our most detailed package for complete health evaluation. Includes infectious disease screening, hormonal balance, vitamin levels, and organ health.",
     tests:
-      " CBC, HBA1C, BSF, LFT, KFT, LIPID PROFILE, TFT, VITAMIN D3, VITAMIN B12, HIV, HCV, HbsAg, URINE, ROUTINE EXAMINATION",
+      "CBC, HBA1C, BSF, LFT, KFT, LIPID PROFILE, TFT, VITAMIN D3, VITAMIN B12, HIV, HCV, HbsAg, URINE, ROUTINE EXAMINATION",
     ActualPrice: 7420,
     OfferPrice: 3499,
     rating: 4.5,
   },
   {
     img: package4,
-    title: "ANTENATAL PACKAGE",
+    title: "Antenatal Health Check Package",
+    description:
+      "Specially designed for expecting mothers, this package ensures comprehensive prenatal screening to support a healthy pregnancy.",
     tests:
       "CBC, BLOOD GROUP, BSR, HIV, HbsAg, HCV, VDRL, TFT, URINE ROUTINE EXAMINATION",
     ActualPrice: 2670,
@@ -73,8 +82,10 @@ const packages = [
   },
   {
     img: package7,
-    title: "DIABETIC WELLNESS PACKAGE",
-    tests: "BSF, BSPP, HBA1C, URINE ROUTINE EXAMINATION,",
+    title: "Diabetes Care Monitoring Package",
+    description:
+      "A focused wellness package for individuals with diabetes or those at risk. Helps monitor glucose levels and manage diabetic health.",
+    tests: "BSF, BSPP, HBA1C, URINE ROUTINE EXAMINATION",
     ActualPrice: 840,
     OfferPrice: 499,
     rating: 4.8,
@@ -102,7 +113,7 @@ const packages = [
         className="px-4 py-12 my-10 bg-gray-200 max-w-6xl mx-auto text-center"
         data-aos="fade-up"
       >
-        <h2 className="text-2xl md:text-3xl font-bold text-[#005b4c] mb-4">
+        <h2 className="text-2xl md:text-3xl font-bold text-[#a01a5a] mb-4">
           What Our Pacakages Offer
         </h2>
         <p className="text-gray-600 text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
@@ -114,20 +125,20 @@ const packages = [
         </p>
       </section>
       <div className="flex flex-col  space-y-6">
-        <div className="text-center py-6 bg-[#005b4c]">
+        <div className="text-center py-6 bg-[rgba(255,164,208,0.2)]">
           <div
             className={`flex flex-wrap gap-4 md:gap-8 justify-center overflow-hidden transition-all duration-500 ${
               showAll ? "max-h-[1000rem]" : "max-h-[36rem]"
             }`}
           >
             {packages.map((item, index) => (
-              <Card data={item} key={index} />
+              <Card type={"packages"} data={item} key={index} />
             ))}
           </div>
 
           <button
             onClick={() => setShowAll((prev) => !prev)}
-            className="mt-10 px-6 cursor-pointer py-2 flex md:w-2/12 space-x-1.5 m-auto justify-center items-center text-[#005b4c] bg-[#dff391]  transition rounded-md"
+            className="mt-10 px-6 cursor-pointer py-2 flex md:w-2/12 space-x-1.5 m-auto justify-center items-center text-[#a01a5a] bg-[rgba(255,164,208,1)]  transition rounded-md"
           >
             {showAll ? <IoIosArrowUp /> : <IoIosArrowDown />}
             <span className="font-ralewaySb">

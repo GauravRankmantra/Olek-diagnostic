@@ -50,52 +50,62 @@ const ContactForm = ({ onClose }) => {
           <IoMdClose size={24} />
         </button>
 
-        <h2 className="text-3xl font-bold text-[#005b4c] mb-6 text-center">Contact Us</h2>
+        <h2 className="text-3xl font-bold text-[#a01a5a] mb-6 text-center">
+          Contact Us
+        </h2>
 
         <form onSubmit={sendEmail} className="space-y-5">
           <div>
-            <label className="block text-sm text-start font-semibold text-gray-600">Full Name *</label>
+            <label className="block text-sm text-start font-semibold text-gray-600">
+              Full Name *
+            </label>
             <input
               type="text"
               name="name"
               value={formData.name}
               onChange={handleChange}
-              className="w-full mt-1 px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#005b4c]"
+              className="w-full mt-1 px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#a01a5a]"
               required
             />
           </div>
 
           <div>
-            <label className="block text-sm text-start  font-semibold text-gray-600">Email</label>
+            <label className="block text-sm text-start  font-semibold text-gray-600">
+              Email
+            </label>
             <input
               type="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
-              className="w-full mt-1 px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#005b4c]"
+              className="w-full mt-1 px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#a01a5a]"
             />
           </div>
 
           <div>
-            <label className="block text-sm text-start  font-semibold text-gray-600">Phone Number *</label>
+            <label className="block text-sm text-start  font-semibold text-gray-600">
+              Phone Number *
+            </label>
             <input
               type="tel"
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className="w-full mt-1 px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#005b4c]"
+              className="w-full mt-1 px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#a01a5a]"
               required
             />
           </div>
 
           <div>
-            <label className="block text-sm text-start  font-semibold text-gray-600">Message</label>
+            <label className="block text-sm text-start  font-semibold text-gray-600">
+              Message
+            </label>
             <textarea
               name="message"
               rows="4"
               value={formData.message}
               onChange={handleChange}
-              className="w-full mt-1 px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#005b4c]"
+              className="w-full mt-1 px-4 py-3 border border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-[#a01a5a]"
               placeholder="Type your message here..."
             ></textarea>
           </div>
@@ -106,7 +116,7 @@ const ContactForm = ({ onClose }) => {
             className={`w-full py-3 font-semibold rounded-xl transition duration-300 ${
               isDisabled || sending
                 ? "bg-gray-300 text-gray-600 cursor-not-allowed"
-                : "bg-[#005b4c] text-white hover:bg-[#007766]"
+                : "bg-[#a01a5a] text-white hover:bg-[#007766]"
             }`}
           >
             {sending ? "Sending..." : "Send Message"}
