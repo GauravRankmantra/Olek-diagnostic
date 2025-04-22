@@ -2,11 +2,20 @@ import React, { useEffect, useState } from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import { AiOutlineFileDone } from "react-icons/ai";
 import ContactForm from "./ContactForm";
+import { BiSolidOffer } from "react-icons/bi";
+
 import CardDetail from "./CardDetail";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 const Card = ({ data, type }) => {
+  const percentageOff =
+    data?.ActualPrice && data?.OfferPrice
+      ? Math.round(
+          ((data.ActualPrice - data.OfferPrice) / data.ActualPrice) * 100
+        )
+      : null;
+
   const [showForm, setShowForm] = useState(false);
   const [showDetail, setShowDetail] = useState(false);
   useEffect(() => {
@@ -23,7 +32,13 @@ const Card = ({ data, type }) => {
           data={data}
         />
       )}
-      <div className="md:w-3/12 w-[45%] md:m-3 my-2 mx-1 rounded-lg overflow-hidden bg-gray-200 shadow-lg hover:shadow-xl transition-shadow duration-300 card-fade-in">
+      <div className="relative md:w-3/12 w-[45%] md:m-3 my-2 mx-1 rounded-lg overflow-hidden bg-gray-200 shadow-lg hover:shadow-xl transition-shadow duration-300 card-fade-in">
+        {percentageOff && (
+          <div className="absolute right-0 z-10 flex items-center bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold text-lg rounded-lg space-x-1 px-4 py-1 shadow-lg ">
+          <BiSolidOffer className="w-6 h-6"/>
+            {percentageOff}% Off
+          </div>
+        )}
         <div className="relative space-y-2">
           <img
             className="w-full md:h-[15rem] h-[10rem] object-cover rounded-t-lg"
@@ -51,11 +66,21 @@ const Card = ({ data, type }) => {
             </button>
           </div>
 
-          {data?.ActualPrice&&(
+          {data?.ActualPrice && (
             <div className="flex flex-col md:flex-row p-1 md:px-4 px-2 justify-between border border-gray-300 rounded">
-              <h1 className="font-ralewayM">Actual Price : <span className="text-red-500 font-semibold font-sans">{data.ActualPrice} ₹</span></h1>
-              {data?.OfferPrice&&(
-                              <h1 className="font-ralewayM">Offer Price : <span className="text-green-500 font-semibold font-sans">{data.OfferPrice} ₹</span></h1>
+              <h1 className="font-ralewayM">
+                Actual Price :{" "}
+                <span className="text-red-500 font-semibold font-sans">
+                  {data.ActualPrice} ₹
+                </span>
+              </h1>
+              {data?.OfferPrice && (
+                <h1 className="font-ralewayM">
+                  Offer Price :{" "}
+                  <span className="text-green-500 font-semibold font-sans">
+                    {data.OfferPrice} ₹
+                  </span>
+                </h1>
               )}
             </div>
           )}
