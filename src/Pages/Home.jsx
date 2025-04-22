@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper/modules";
+import { EffectCards } from "swiper/modules";
 import HealthCheckupHero from "../components/HealthCheckupHero";
 import { motion } from "framer-motion";
 import AOS from "aos";
@@ -35,7 +36,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
 import ContactForm from "../components/ContactForm";
-import { EffectCreative } from 'swiper/modules';
+import { EffectCreative } from "swiper/modules";
 
 import Card from "../components/Card";
 import Location from "../components/Location";
@@ -338,12 +339,18 @@ const packages = [
   },
 ];
 
-const Slide = ({ img, heading, subHeading, setShowForm, index, activeIndex }) => {
+const Slide = ({
+  img,
+  heading,
+  subHeading,
+  setShowForm,
+  index,
+  activeIndex,
+}) => {
   const isActive = index === activeIndex;
 
   return (
     <div className="w-full h-[40rem] bg-white flex flex-col md:flex-row overflow-hidden">
-      
       {/* Left Section - Text */}
       <motion.div
         key={heading}
@@ -391,17 +398,11 @@ const Slide = ({ img, heading, subHeading, setShowForm, index, activeIndex }) =>
       {/* Right Section - Image */}
       <div className="w-full md:w-1/2 relative">
         <div className="absolute inset-0 z-10 bg-gradient-to-b md:bg-gradient-to-r from-white/90 via-white/10 to-transparent" />
-        <img
-          src={img}
-          alt={heading}
-          className="w-full h-full object-cover"
-        />
+        <img src={img} alt={heading} className="w-full h-full object-cover" />
       </div>
     </div>
   );
 };
-
-
 
 const Home = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -411,42 +412,40 @@ const Home = () => {
     <>
       {showForm && <ContactForm onClose={() => setShowForm(false)} />}
       <div className="bg-white">
-      <Swiper
-      autoplay={{ delay: 4000, disableOnInteraction: false }}
-      loop={true}
-      onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-      modules={[Autoplay,EffectCreative]}
-      effect={'creative'}
-      creativeEffect={{
-        prev: {
-          shadow: true,
-          translate: ['-120%', 0, -500],
-        },
-        next: {
-          shadow: true,
-          translate: ['120%', 0, -500],
-        },
-      }}
-   
-      className="mySwiper2 w-full h-full"
-    >
-      {data.map((slideData, index) => (
-        <SwiperSlide key={index} className="relative">
-          <Slide
-            {...slideData}
-            setShowForm={setShowForm}
-            index={index}
-            activeIndex={activeIndex}
+        <Swiper
+          autoplay={{ delay: 4000, disableOnInteraction: false }}
+          loop={true}
+          onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
+          modules={[Autoplay, EffectCreative]}
+          effect={"creative"}
+          creativeEffect={{
+            prev: {
+              shadow: true,
+              translate: ["-120%", 0, -500],
+            },
+            next: {
+              shadow: true,
+              translate: ["120%", 0, -500],
+            },
+          }}
+          className="mySwiper2 w-full h-full"
+        >
+          {data.map((slideData, index) => (
+            <SwiperSlide key={index} className="relative">
+              <Slide
+                {...slideData}
+                setShowForm={setShowForm}
+                index={index}
+                activeIndex={activeIndex}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        <hr className="text-gray-400"></hr>
+        <div className="my-10">
+          <HealthCheckupHero />
+        </div>
 
-          />
-        </SwiperSlide>
-      ))}
-    </Swiper>
-    <hr className="text-gray-400"></hr>
-    <div className="my-10">
-    <HealthCheckupHero />
-    </div>
-       
         <hr className="text-[#a01a5a]"></hr>
         <div className="flex w-[98%] md:w-[80%] mx-auto shadow-2xl rounded-3xl  my-10 md:my-32">
           <div className="space-y-4.5 border rounded-l-3xl p-4 px-5 border-[#e3f4a0]/30 md:w-[50%]">
@@ -498,7 +497,6 @@ const Home = () => {
           </h1>
           <div className="text-center py-6 bg-[rgba(255,164,208,0.2)]">
             <div
-                
               className={`flex flex-wrap gap-2 md:gap-8 justify-center overflow-hidden transition-all duration-500 ${
                 showAll ? "max-h-[1000rem]" : "max-h-[36rem]"
               }`}
@@ -526,7 +524,9 @@ const Home = () => {
         <h1 className="text-center z-50  text-4xl font-ralewayB text-[#a01a5a]">
           Health & Wellness Packages
         </h1>
-        <h1 className="text-center  text-2xl font-ralewayL my-2 text-[#a01a5a]">Get Quality Health Tests at Affordable Prices</h1>
+        <h1 className="text-center text-lg  md:text-2xl font-ralewayL my-2 text-[#a01a5a]">
+          Get Quality Health Tests at Affordable Prices
+        </h1>
         <div className="flex flex-col  space-y-6">
           <div className="text-center py-6 bg-[rgba(255,164,208,0.2)]">
             <div
@@ -551,6 +551,31 @@ const Home = () => {
             </button>
           </div>
         </div>
+{/* Show only on mobile screens (md and above: hidden) */}
+{/* <div className=" md:hidden  flex justify-center w-full mx-auto">
+  <Swiper
+    modules={[Autoplay, EffectCreative]}
+    effect={"creative"}
+    creativeEffect={{
+      prev: {
+        shadow: true,
+        translate: ["-120%", 0, -500],
+      },
+      next: {
+        shadow: true,
+        translate: ["120%", 0, -500],
+      },
+    }}
+    className="mySwiper2 w-full h-full"
+  >
+    {packages.map((item, index) => (
+      <SwiperSlide key={index}>
+        <Card type={"packages"} data={item} />
+      </SwiperSlide>
+    ))}
+  </Swiper>
+</div> */}
+
 
         <div>
           <TestimonialSwiper />

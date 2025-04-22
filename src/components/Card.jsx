@@ -32,7 +32,7 @@ const Card = ({ data, type }) => {
           data={data}
         />
       )}
-      <div className="relative md:w-3/12 w-[45%] md:m-3 my-2 mx-1 rounded-lg overflow-hidden bg-gray-200 shadow-lg hover:shadow-xl transition-shadow duration-300 card-fade-in">
+      <div className="relative md:w-3/12 w-full md:m-3 my-2 mx-1 rounded-lg overflow-hidden bg-gray-200 shadow-lg hover:shadow-xl transition-shadow duration-300 card-fade-in">
         {percentageOff && (
           <div className="absolute right-0 z-10 flex items-center bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold text-lg rounded-lg space-x-1 px-4 py-1 shadow-lg ">
           <BiSolidOffer className="w-6 h-6"/>

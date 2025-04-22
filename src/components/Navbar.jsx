@@ -123,8 +123,8 @@ const Navbar = () => {
             href={`tel:${phoneNumber}`}
             className="flex items-center bg-[#a01a5a] hover:bg-[rgba(255,164,208,1)] p-2 rounded transition group"
           >
-            <IoMdCall className="w-5 h-5 mr-2 text-[rgba(255,164,208,1)] group-hover:text-[#a01a5a]" />
-            <span className="text-sm text-[rgba(255,164,208,1)] group-hover:text-[#a01a5a]">
+            <IoMdCall className="w-5 h-5 mr-2 text-[#fefefe] group-hover:text-[#a01a5a]" />
+            <span className="text-sm text-[#ffffff] group-hover:text-[#a01a5a]">
               Call us
             </span>
           </a>

@@ -11,8 +11,8 @@ const CardDetail = ({ type, bookNow, onClose, data }) => {
   };
 
   return (
-    <div className="fixed inset-0 z-50 bg-black/60 bg-opacity-50 flex items-center justify-center p-4">
-      <div className="bg-white rounded-2xl shadow-xl max-w-4xl w-full overflow-hidden relative animate-fadeIn">
+    <div className="fixed inset-0 z-50 bg-black/60 bg-opacity-50 flex items-center justify-center p-4 ">
+      <div className="bg-white md:mt-0 mt-10 rounded-2xl shadow-xl max-w-4xl w-full overflow-hidden relative animate-fadeIn">
         {/* Close Button */}
         <button
           className="absolute cursor-pointer top-3 right-3 text-gray-600 hover:text-red-500 z-10"
