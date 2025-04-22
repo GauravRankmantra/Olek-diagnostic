@@ -50,6 +50,15 @@ const Card = ({ data, type }) => {
               <IoIosArrowForward className="text-[#a01a5a] hover:text-white transition-colors duration-300 w-5 h-5" />
             </button>
           </div>
+
+          {data?.ActualPrice&&(
+            <div className="flex flex-col md:flex-row p-1 md:px-4 px-2 justify-between border border-gray-300 rounded">
+              <h1 className="font-ralewayM">Actual Price : <span className="text-red-500 font-semibold font-sans">{data.ActualPrice} ₹</span></h1>
+              {data?.OfferPrice&&(
+                              <h1 className="font-ralewayM">Offer Price : <span className="text-green-500 font-semibold font-sans">{data.OfferPrice} ₹</span></h1>
+              )}
+            </div>
+          )}
           <button
             onClick={() => setShowForm(true)}
             className="flex border p-1 rounded border-[#a01a5a] cursor-pointer hover:bg-[#a01a5a] group m-auto my-2 md:w-4/12 justify-center items-center space-x-1.5"
