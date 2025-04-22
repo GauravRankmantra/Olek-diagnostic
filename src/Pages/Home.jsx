@@ -35,6 +35,7 @@ import { IoIosArrowForward } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
 import ContactForm from "../components/ContactForm";
+import { EffectCreative } from 'swiper/modules';
 
 import Card from "../components/Card";
 import Location from "../components/Location";
@@ -414,8 +415,20 @@ const Home = () => {
       autoplay={{ delay: 4000, disableOnInteraction: false }}
       loop={true}
       onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-      modules={[Autoplay]}
-      className="w-full h-full"
+      modules={[Autoplay,EffectCreative]}
+      effect={'creative'}
+      creativeEffect={{
+        prev: {
+          shadow: true,
+          translate: ['-120%', 0, -500],
+        },
+        next: {
+          shadow: true,
+          translate: ['120%', 0, -500],
+        },
+      }}
+   
+      className="mySwiper2 w-full h-full"
     >
       {data.map((slideData, index) => (
         <SwiperSlide key={index} className="relative">
