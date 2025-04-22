@@ -1,16 +1,28 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { IoIosArrowForward } from "react-icons/io";
 import { AiOutlineFileDone } from "react-icons/ai";
 import ContactForm from "./ContactForm";
 import CardDetail from "./CardDetail";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-const Card = ({ data,type }) => {
+const Card = ({ data, type }) => {
   const [showForm, setShowForm] = useState(false);
-  const [showDetail,setShowDetail]=useState(false);
+  const [showDetail, setShowDetail] = useState(false);
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
   return (
     <>
       {showForm && <ContactForm onClose={() => setShowForm(false)} />}
-        {showDetail&&<CardDetail type={type} bookNow={()=>setShowForm(true)} onClose={() => setShowDetail(false)} data={data}/>}
+      {showDetail && (
+        <CardDetail
+          type={type}
+          bookNow={() => setShowForm(true)}
+          onClose={() => setShowDetail(false)}
+          data={data}
+        />
+      )}
       <div className="md:w-3/12 w-[45%] md:m-3 my-2 mx-1 rounded-lg overflow-hidden bg-gray-200 shadow-lg hover:shadow-xl transition-shadow duration-300 card-fade-in">
         <div className="relative space-y-2">
           <img
@@ -20,7 +32,10 @@ const Card = ({ data,type }) => {
           />
           <div className="flex md:p-4 p-2 items-center">
             <div className="pr-2 space-y-2 w-10/12">
-              <h1 className="md:text-2xl text-lg font-ralewayB text-[#a01a5a] text-start leading-snug truncate">
+              <h1
+                data-aos="fade-right"
+                className="md:text-2xl text-lg font-ralewayB text-[#a01a5a] text-start leading-snug break-words"
+              >
                 {data.title}
               </h1>
 
@@ -28,7 +43,10 @@ const Card = ({ data,type }) => {
                 {data.description || data.tests}
               </p>
             </div>
-            <button onClick={()=>setShowDetail(true)} className="cursor-pointer rounded-full md:w-10 md:h-10 border border-[#a01a5a] flex items-center justify-center hover:bg-[#a01a5a] transition-colors duration-300">
+            <button
+              onClick={() => setShowDetail(true)}
+              className="cursor-pointer rounded-full md:w-10 md:h-10 border border-[#a01a5a] flex items-center justify-center hover:bg-[#a01a5a] transition-colors duration-300"
+            >
               <IoIosArrowForward className="text-[#a01a5a] hover:text-white transition-colors duration-300 w-5 h-5" />
             </button>
           </div>

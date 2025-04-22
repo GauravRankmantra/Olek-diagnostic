@@ -10,84 +10,113 @@ const AboutUs = () => {
   }, []);
 
   return (
-    <div className="bg-white text-gray-800 font-sans">
-      {/* Hero Section */}
+    <div className="bg-white text-gray-800 font-sans leading-relaxed">
+      {/* Hero */}
       <div className="relative h-[60vh] flex items-center justify-center bg-cover bg-center" style={{ backgroundImage: `url(${img2})` }}>
-        <div className="bg-black/30 w-full h-full absolute top-0 left-0" />
+        <div className="absolute inset-0 bg-black/40" />
         <h1 className="text-white text-4xl md:text-6xl font-bold z-10 text-center px-4 [text-shadow:_2px_2px_6px_rgba(0,0,0,0.7)]" data-aos="fade-down">
-          Discover Olek Diagnostics
+          About Olek Diagnostics
         </h1>
       </div>
 
-      {/* Introduction Section */}
-      <section className="py-16 px-4 max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-10 items-center">
-          <img src={clinic} alt="Olek Diagnostics Clinic" className="rounded-lg shadow-lg" data-aos="fade-right" />
-          <div data-aos="fade-left">
-            <h2 className="text-3xl font-bold text-[#a01a5a] mb-4">Redefining Diagnostic Excellence</h2>
-            <p className="text-lg leading-relaxed mb-4">
-              At <strong>Olek Diagnostics</strong>, we don’t just offer tests — we provide insights. Located in the heart of Dehradun, we’re committed to transforming the healthcare experience through accuracy, innovation, and empathy. Our modern infrastructure, state-of-the-art equipment, and expert medical staff ensure that every test leads to clarity and confidence in your health journey.
-            </p>
-            <p className="text-lg leading-relaxed">
-              With an unwavering commitment to quality and a patient-first philosophy, we empower you to make informed decisions about your health in a stress-free and hygienic environment.
-            </p>
+      {/* Introduction */}
+      <section className="py-16 px-4 max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+        <img src={clinic} alt="Our Lab Facility" className="rounded-xl shadow-xl" data-aos="fade-right" />
+        <div data-aos="fade-left">
+          <h2 className="text-3xl font-bold text-[#a01a5a] mb-4">Who We Are</h2>
+          <p className="text-lg mb-4">
+            At <strong>Olek Diagnostics</strong>, we are committed to revolutionizing healthcare with affordable and precise diagnostic services. Established in Dehradun, our lab blends compassion with cutting-edge science, ensuring that patients receive accurate results with complete clarity.
+          </p>
+          <p className="text-lg">
+            We specialize in delivering high-quality lab tests, preventive health checkups, and diagnostic consultations tailored for individuals, families, and healthcare providers across Uttarakhand and beyond.
+          </p>
+        </div>
+      </section>
+
+      {/* Our Journey */}
+      <section className="bg-gray-100 py-16 px-4" data-aos="fade-up">
+        <div className="max-w-5xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-6 text-[#a01a5a]">Our Journey</h2>
+          <p className="text-lg mb-4">
+            Since our inception, Olek Diagnostics has grown from a small community lab into a trusted name in the diagnostics industry. Our journey has been defined by innovation, relentless quality control, and strong community engagement.
+          </p>
+          <p className="text-lg">
+            From routine tests to specialized panels, our comprehensive diagnostic offerings are backed by NABL-equivalent lab standards and a patient-first philosophy.
+          </p>
+        </div>
+      </section>
+
+      {/* Mission, Vision & Values */}
+      <section className="py-16 px-4 max-w-6xl mx-auto" data-aos="fade-up">
+        <div className="text-center mb-10">
+          <h2 className="text-3xl font-bold text-[#a01a5a] mb-3">Our Mission, Vision & Values</h2>
+        </div>
+        <div className="grid md:grid-cols-3 gap-10 text-center">
+          <div>
+            <h3 className="text-xl font-semibold text-[#a01a5a] mb-2">Mission</h3>
+            <p>To empower every individual with accessible, accurate, and affordable diagnostics—enabling informed decisions for better health outcomes.</p>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold text-[#a01a5a] mb-2">Vision</h3>
+            <p>To be the most trusted diagnostic partner in North India, transforming healthcare through innovation, compassion, and clinical excellence.</p>
+          </div>
+          <div>
+            <h3 className="text-xl font-semibold text-[#a01a5a] mb-2">Core Values</h3>
+            <ul className="space-y-1">
+              <li><strong>Integrity</strong> in every report</li>
+              <li><strong>Empathy</strong> in every interaction</li>
+              <li><strong>Accuracy</strong> in every test</li>
+              <li><strong>Innovation</strong> in every process</li>
+            </ul>
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
+      {/* Our Technology */}
       <section className="bg-gray-100 py-16 px-4" data-aos="fade-up">
-        <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4 text-[#a01a5a]">Why Olek Diagnostics?</h2>
-          <p className="text-lg leading-relaxed mb-6">
-            In a world of uncertainty, accurate diagnostics is your first line of defense. Whether it’s a routine check-up or a specialized test, our team ensures precision, promptness, and privacy every step of the way. Our technology-driven systems eliminate guesswork and bring you closer to proactive health management.
-          </p>
-          <p className="text-lg leading-relaxed">
-            With years of trusted service, we have become a preferred choice for thousands across Uttarakhand seeking dependable health diagnostics without compromising comfort or cost.
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-[#a01a5a] mb-6">Advanced Diagnostic Technology</h2>
+          <p className="text-lg mb-4">
+            Our lab is equipped with fully automated analyzers, digital pathology systems, and AI-powered reporting tools to ensure consistent and reliable outcomes. With real-time data sharing, secure portals, and cloud-based reports, we bring diagnostics into the modern age.
           </p>
         </div>
       </section>
 
-      {/* Vision and Mission */}
-      <section className="py-16 px-4 max-w-4xl mx-auto" data-aos="fade-up">
-        <h2 className="text-3xl font-bold text-center mb-4 text-[#a01a5a]">Our Vision & Mission</h2>
-        <p className="text-lg text-center leading-relaxed mb-4">
-          Our vision is to create a healthier society by making early detection and preventive diagnostics accessible, affordable, and reliable for everyone.
-        </p>
-        <p className="text-lg text-center leading-relaxed">
-          Our mission is to uphold the highest standards of medical testing, driven by continuous innovation, compassion, and collaboration with medical professionals, while placing our patients’ well-being at the core of every decision we make.
-        </p>
+      {/* Meet Our Team */}
+      <section className="py-16 px-4 max-w-6xl mx-auto" data-aos="fade-up">
+        <div className="text-center mb-10">
+          <h2 className="text-3xl font-bold text-[#a01a5a]">Meet Our Experts</h2>
+          <p className="text-lg mt-2">A team of dedicated pathologists, lab technologists, and diagnostic specialists committed to your well-being.</p>
+        </div>
+        <div className="grid md:grid-cols-3 gap-8 text-center">
+          <div>
+            <h4 className="text-xl font-semibold">Dr. Anjali Mehta</h4>
+            <p className="text-sm text-gray-600">Chief Pathologist</p>
+          </div>
+          <div>
+            <h4 className="text-xl font-semibold">Dr. Kunal Verma</h4>
+            <p className="text-sm text-gray-600">Radiology Consultant</p>
+          </div>
+          <div>
+            <h4 className="text-xl font-semibold">Ritika Sharma</h4>
+            <p className="text-sm text-gray-600">Lab Operations Manager</p>
+          </div>
+        </div>
       </section>
 
-      {/* Our Core Values */}
-      <section className="bg-gray-100 py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-10 text-[#a01a5a]" data-aos="fade-up">Our Core Values</h2>
-          <div className="grid md:grid-cols-2 gap-10">
-            <div data-aos="fade-right">
-              <h4 className="text-xl font-semibold mb-2">Uncompromised Accuracy</h4>
-              <p>
-                Accuracy is not an option — it’s our standard. Every report is verified and validated through stringent quality controls, ensuring medical precision and peace of mind.
-              </p>
-            </div>
-            <div data-aos="fade-left">
-              <h4 className="text-xl font-semibold mb-2">People First</h4>
-              <p>
-                From walk-in patients to partner physicians, every interaction is guided by empathy, respect, and responsiveness. Your comfort and confidence are our priority.
-              </p>
-            </div>
-            <div data-aos="fade-right">
-              <h4 className="text-xl font-semibold mb-2">Transparency & Trust</h4>
-              <p>
-                We believe in complete transparency in our processes, prices, and results — building long-term trust with every patient we serve.
-              </p>
-            </div>
-            <div data-aos="fade-left">
-              <h4 className="text-xl font-semibold mb-2">Excellence Through Innovation</h4>
-              <p>
-                Our diagnostic labs are equipped with cutting-edge technology and constantly evolving practices to ensure timely and accurate diagnostics at all times.
-              </p>
-            </div>
+      {/* Patient Testimonials */}
+      <section className="bg-gray-100 py-16 px-4" data-aos="fade-up">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-[#a01a5a] mb-6">What Our Patients Say</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <blockquote className="bg-white p-6 shadow-lg rounded-lg">
+              <p className="text-lg italic">“The staff was so polite and the test reports came earlier than expected. Highly recommended!”</p>
+              <cite className="block mt-4 text-sm font-medium">– Neha Thakur, Dehradun</cite>
+            </blockquote>
+            <blockquote className="bg-white p-6 shadow-lg rounded-lg">
+              <p className="text-lg italic">“Clean facility, affordable prices, and super professional. I trust them with all my family checkups.”</p>
+              <cite className="block mt-4 text-sm font-medium">– Rajeev S., GMS Road</cite>
+            </blockquote>
           </div>
         </div>
       </section>

@@ -3,6 +3,10 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import bg from "../assets/Images/bg-service.jpg";
+import { BsFillDropletFill, BsHeartPulseFill } from "react-icons/bs";
+import { FaMicroscope, FaUserNurse, FaLaptopMedical } from "react-icons/fa";
+import { GiStethoscope, GiHealthCapsule } from "react-icons/gi";
+
 import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
 import Card from "../components/Card";
@@ -214,35 +218,73 @@ const cardData = [
     AOS.init({ duration: 1000 });
   }, []);
   return (
-    <div>
+<div>
+      {/* Hero Section */}
       <div
         className="relative h-[60vh] flex items-center justify-center bg-cover bg-center"
         style={{ backgroundImage: `url(${bg})` }}
       >
-        <div className="bg-black/20 bg-opacity-50 w-full h-full absolute top-0 left-0" />
-        <h1
-          className="text-white  [text-shadow:_2px_2px_4px_rgba(0,0,0,0.7)] text-4xl md:text-6xl font-bold z-10 text-center px-4"
-          data-aos="fade-down"
-        >
-          Our Services
-        </h1>
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="z-10 text-center px-4">
+          <h1
+            className="text-white text-4xl md:text-6xl font-bold mb-4 [text-shadow:_2px_2px_4px_rgba(0,0,0,0.7)]"
+            data-aos="fade-down"
+          >
+            Our Services
+          </h1>
+          <p className="text-white text-lg md:text-xl max-w-2xl mx-auto" data-aos="fade-up">
+            Comprehensive diagnostics, home sample collection, health checkups & wellness — everything you need under one roof.
+          </p>
+        </div>
       </div>
 
-      <section
-        className="px-4 py-12 my-10 bg-gray-200 max-w-6xl mx-auto text-center"
-        data-aos="fade-up"
-      >
-        <h2 className="text-2xl md:text-3xl font-bold text-[#a01a5a] mb-4">
-          What We Offer
-        </h2>
+      {/* Intro Section */}
+      <section className="px-4 py-12 bg-gray-200 max-w-6xl mx-auto text-center" data-aos="fade-up">
+        <h2 className="text-2xl md:text-3xl font-bold text-[#a01a5a] mb-4">What We Offer</h2>
         <p className="text-gray-600 text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
-          At Olek Diagnostics, we offer a wide range of healthcare services to
+        At Olek Diagnostics, we offer a wide range of healthcare services to
           ensure early diagnosis, prevention, and long-term well-being. From
           accurate blood tests and full-body checkups to convenient home sample
           collections and corporate wellness programs — our expert team is
           committed to your health.
         </p>
       </section>
+
+      {/* Detailed Service Highlights */}
+      <section className="max-w-6xl md:my-10 mx-auto py-10 px-4 grid md:grid-cols-3 gap-10 text-center" data-aos="fade-up">
+        <div className="bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl transition">
+          <BsFillDropletFill className="text-[#a01a5a] text-4xl mx-auto mb-4" />
+          <h3 className="text-xl font-semibold mb-2">Blood & Urine Tests</h3>
+          <p className="text-gray-600">CBC, ESR, Sugar, Lipid Profile, LFT, KFT & more — accurate, affordable & fast reporting.</p>
+        </div>
+        <div className="bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl transition">
+          <FaMicroscope className="text-[#a01a5a] text-4xl mx-auto mb-4" />
+          <h3 className="text-xl font-semibold mb-2">Advanced Pathology</h3>
+          <p className="text-gray-600">Hormonal, Thyroid, Vitamin, Allergy, Cancer markers — all analyzed in-house with expert supervision.</p>
+        </div>
+        <div className="bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl transition">
+          <FaLaptopMedical className="text-[#a01a5a] text-4xl mx-auto mb-4" />
+          <h3 className="text-xl font-semibold mb-2">Online Reports</h3>
+          <p className="text-gray-600">Digital reports delivered securely to your email/WhatsApp with full history tracking.</p>
+        </div>
+        <div className="bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl transition">
+          <GiStethoscope className="text-[#a01a5a] text-4xl mx-auto mb-4" />
+          <h3 className="text-xl font-semibold mb-2">Doctor Consultation</h3>
+          <p className="text-gray-600">Post-test consultations available with internal medicine specialists & health advisors.</p>
+        </div>
+        <div className="bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl transition">
+          <FaUserNurse className="text-[#a01a5a] text-4xl mx-auto mb-4" />
+          <h3 className="text-xl font-semibold mb-2">Home Sample Collection</h3>
+          <p className="text-gray-600">Elderly or busy? Book a home visit with just a call. Safe, hygienic, and quick sample pickups.</p>
+        </div>
+        <div className="bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl transition">
+          <GiHealthCapsule className="text-[#a01a5a] text-4xl mx-auto mb-4" />
+          <h3 className="text-xl font-semibold mb-2">Corporate & Wellness Packages</h3>
+          <p className="text-gray-600">Tailored preventive packages for individuals, families, and employees. Affordable and customizable.</p>
+        </div>
+      </section>
+
+      {/* Cards Section */}
       <div className="flex flex-col space-y-6">
         <div className="text-center py-6 bg-[rgba(255,164,208,0.2)]">
           <div
@@ -251,25 +293,24 @@ const cardData = [
             }`}
           >
             {cardData.map((item, index) => (
-             <Card type={'services'} data={item} key={index} />
+              <Card type="services" data={item} key={index} />
             ))}
           </div>
 
           <button
             onClick={() => setShowAll((prev) => !prev)}
-            className="mt-10 px-6 cursor-pointer py-2 flex md:w-2/12 space-x-1.5 m-auto justify-center items-center text-[#a01a5a] bg-[rgba(255,164,208,1)]  transition rounded-md"
+            className="mt-10 px-6 cursor-pointer py-2 flex md:w-2/12 space-x-1.5 m-auto justify-center items-center text-[#a01a5a] bg-[rgba(255,164,208,1)] transition rounded-md"
           >
             {showAll ? <IoIosArrowUp /> : <IoIosArrowDown />}
             <span className="font-ralewaySb">
-              {" "}
               {showAll ? "Show Less" : "Show More"}
             </span>
           </button>
         </div>
       </div>
-      <div>
-        <Location />
-      </div>
+
+      {/* Location Section */}
+      <Location />
     </div>
   );
 };

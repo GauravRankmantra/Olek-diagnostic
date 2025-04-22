@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/Images/olekLogo.jpg";
 import { IoMdCall } from "react-icons/io";
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
+import { FaInstagram, FaWhatsapp, FaFacebookF } from "react-icons/fa";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,12 +18,30 @@ const Navbar = () => {
     { name: "Contact us", path: "/contact" },
   ];
 
+  const socialLinks = [
+    {
+      icon: <FaInstagram />,
+      url: "https://www.instagram.com/yourprofile",
+      label: "Instagram",
+    },
+    {
+      icon: <FaWhatsapp />,
+      url: "https://wa.me/919368548552",
+      label: "WhatsApp",
+    },
+    {
+      icon: <FaFacebookF />,
+      url: "https://www.facebook.com/yourpage",
+      label: "Facebook",
+    },
+  ];
+
   return (
-    <nav className="bg-gray-200 border-b border-gray-100 shadow-md font-ralewaySb sticky top-0 z-50">
+    <nav className="bg-white border-b border-gray-100 shadow-md font-ralewaySb sticky top-0 z-50">
       <div className="max-w-screen-xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-3">
-          <img src={logo} className="h-12 object-contain" alt="Logo" />
+          <img src={logo} className="h-16 object-contain" alt="Logo" />
         </Link>
 
         {/* Hamburger */}
@@ -68,46 +87,62 @@ const Navbar = () => {
             );
           })}
 
-          {/* 📞 Call Button - visible only on mobile when menu is open */}
+          {/* 📞 Call Button - mobile only */}
           <li className="md:hidden pt-2">
             <a
               href={`tel:${phoneNumber}`}
               className="flex items-center justify-center bg-[#a01a5a] hover:bg-[rgba(255,164,208,1)] p-2 rounded transition group w-full"
             >
               <IoMdCall className="w-5 h-5 mr-2 text-[rgba(255,164,208,1)] group-hover:text-[#a01a5a]" />
-              <span className="text-sm text-[rgba(255,164,208,1)] group-hover:text-[#a01a5a]">
+              <span className="text-sm text-[#ff95c8] group-hover:text-[#a01a5a]">
                 Call us
               </span>
             </a>
           </li>
+
+          {/* 🔗 Social Icons - mobile only */}
+          <li className="md:hidden flex justify-center gap-4 pt-4">
+            {socialLinks.map((item, idx) => (
+              <a
+                key={idx}
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#a01a5a] hover:text-[rgba(255,164,208,1)] transition text-xl"
+                aria-label={item.label}
+              >
+                {item.icon}
+              </a>
+            ))}
+          </li>
         </ul>
 
-        {/* Call Button */}
-        <a
-          href={`tel:${phoneNumber}`}
-          className="hidden md:flex items-center bg-[#a01a5a] hover:bg-[rgba(255,164,208,1)] p-2 rounded transition group"
-        >
-          <IoMdCall className="w-5 h-5 mr-2 text-[rgba(255,164,208,1)] group-hover:text-[#a01a5a]" />
-          <span className="text-sm text-[rgba(255,164,208,1)] group-hover:text-[#a01a5a]">
-            Call us
-          </span>
-        </a>
-      </div>
-
-      {/* Mobile Call button */}
-      {isOpen && (
-        <div className="md:hidden bg-gray-200 px-4 pb-4 border-t border-gray-300">
+        {/* 📞 Call + Socials - desktop */}
+        <div className="hidden md:flex items-center space-x-4">
           <a
             href={`tel:${phoneNumber}`}
-            className="mt-2 flex items-center justify-center bg-[#a01a5a] hover:bg-[rgba(255,164,208,1)] p-2 rounded transition group w-full"
+            className="flex items-center bg-[#a01a5a] hover:bg-[rgba(255,164,208,1)] p-2 rounded transition group"
           >
             <IoMdCall className="w-5 h-5 mr-2 text-[rgba(255,164,208,1)] group-hover:text-[#a01a5a]" />
             <span className="text-sm text-[rgba(255,164,208,1)] group-hover:text-[#a01a5a]">
               Call us
             </span>
           </a>
+
+          {socialLinks.map((item, idx) => (
+            <a
+              key={idx}
+              href={item.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-[#a01a5a] hover:text-[rgba(255,164,208,1)] transition text-xl"
+              aria-label={item.label}
+            >
+              {item.icon}
+            </a>
+          ))}
         </div>
-      )}
+      </div>
     </nav>
   );
 };

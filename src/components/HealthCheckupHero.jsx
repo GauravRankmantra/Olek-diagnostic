@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import heroImg from "../assets/Images/bg-service.jpg"; // Replace with actual image path
 import { MoveRight } from "lucide-react";
 import { MdOutlineHealthAndSafety } from "react-icons/md";
@@ -9,15 +11,18 @@ import { useNavigate } from "react-router-dom";
 
 const HealthCheckupHero = () => {
     const navigate = useNavigate();
+      useEffect(() => {
+        AOS.init({ duration: 1000 });
+      }, []);
   return (
     <section className="w-full font-ralewayB bg-gradient-to-r from-white via-gray-50 to-white py-12 px-4 md:px-10 lg:px-20">
       <div className="grid md:grid-cols-2 items-center gap-10">
         {/* Text Content */}
         <div className="space-y-6 animate-fadeInUp">
-          <h1 className="text-3xl md:text-5xl font-bold text-[#a01a5a] leading-tight">
+          <h1 className="text-3xl md:text-5xl font-bold text-[#a01a5a] leading-tight"  data-aos="zoom-out-right">
             Prioritize Your Health with Regular Checkups
           </h1>
-          <p className="text-gray-600 font-ralewayR text-base md:text-lg leading-relaxed">
+          <p className="text-gray-600 font-ralewayR text-base md:text-lg leading-relaxed" data-aos="zoom-out-right">
             Regular health checkups help detect potential health issues
             early—before they become serious. From monitoring vital organs to
             identifying hidden deficiencies, preventive care plays a key role in
@@ -50,7 +55,8 @@ const HealthCheckupHero = () => {
             </li>
           </ul>
 
-          <button  onClick={() => navigate("/packages")}  className="mt-4 inline-flex items-center bg-[#a01a5a] text-white px-6 py-3 rounded-xl shadow cursor-pointer hover:bg-[#66334c] transition duration-300">
+          <button  onClick={() => navigate("/packages")}  className="mt-4 inline-flex items-center bg-[#a01a5a] text-white px-6 py-3 rounded-xl shadow cursor-pointer hover:bg-[#66334c] transition duration-300" data-aos="fade-up"
+     data-aos-anchor-placement="top-bottom">
             Explore Checkup Packages
             <MoveRight className="ml-2" />
           </button>
