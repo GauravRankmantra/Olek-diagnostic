@@ -15,7 +15,7 @@ const HealthCheckupHero = () => {
         AOS.init({ duration: 1000 });
       }, []);
   return (
-    <section className="w-full font-ralewayB bg-gradient-to-r from-white via-gray-50 to-white py-12 px-4 md:px-10 lg:px-20">
+    <section className="w-full font-ralewayB r bg-blue-50 py-12 md:py-20 px-4 md:px-10 lg:px-20">
       <div className="grid md:grid-cols-2 items-center gap-10">
         {/* Text Content */}
         <div className="space-y-6 animate-fadeInUp">

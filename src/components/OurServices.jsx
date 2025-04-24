@@ -42,7 +42,7 @@ const featuredServices = [
 const OurServices = () => {
     const navigate = useNavigate();
   return (
-    <section className="relative py-24 md:py-32 px-6 lg:px-20 overflow-hidden">
+    <section className="relative py-24  px-6 lg:px-20 overflow-hidden">
       {/* Background Image + Dark Overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center z-0"

@@ -444,7 +444,7 @@ const Home = () => {
           ))}
         </Swiper>
         <hr className="text-gray-400"></hr>
-        <div className="my-10">
+        <div >
           <HealthCheckupHero />
         </div>
 

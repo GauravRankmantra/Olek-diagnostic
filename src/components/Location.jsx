@@ -1,6 +1,7 @@
 import React from "react";
 import { MapPin, Phone, Mail } from "lucide-react";
 
+
 const Location = () => {
   return (
     <div className="w-full px-4 my-10 py-12 bg-gray-200">
@@ -28,7 +29,11 @@ const Location = () => {
             <Phone className="w-5 h-5 mt-1" />
             <div>
               <p className="font-bold">Phone</p>
-              <p className="text-sm font-sans">09368548552</p>
+              <p className="text-sm font-sans">
+                <a href="tel:09368548552" className="hover:underline">
+                  09368548552
+                </a>
+              </p>
             </div>
           </div>
 
@@ -36,7 +41,14 @@ const Location = () => {
             <Mail className="w-5 h-5 mt-1" />
             <div>
               <p className="font-bold">Email</p>
-              <p className="text-sm">olekdiagnosticsandhealth@gmail.com</p>
+              <p className="text-sm">
+                <a
+                  href="mailto:olekdiagnosticsandhealth@gmail.com"
+                  className="hover:underline"
+                >
+                  olekdiagnosticsandhealth@gmail.com
+                </a>
+              </p>
             </div>
           </div>
         </div>

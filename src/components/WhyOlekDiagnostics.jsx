@@ -53,7 +53,7 @@ import {
   const WhyOlekDiagnostics = () => {
     return (
       <div
-        className="bg-gradient-to-br from-blue-50 to-white py-10 md:py-28 px-6 lg:px-20"
+        className="bg-gradient-to-br from-blue-50 to-white py-10 md:py-32 px-6 lg:px-20"
         id="why-olek"
       >
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
