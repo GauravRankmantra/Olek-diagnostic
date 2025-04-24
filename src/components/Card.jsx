@@ -32,13 +32,13 @@ const Card = ({ data, type }) => {
           data={data}
         />
       )}
-      <div className="relative md:w-3/12 w-full md:m-3 my-2 mx-1 rounded-lg overflow-hidden bg-gray-200 shadow-lg hover:shadow-xl transition-shadow duration-300 card-fade-in">
-        {percentageOff && (
+      <div className="relative md:w-3/12 w-full md:m-3 my-2 mx-4 rounded-lg overflow-hidden bg-gray-200 shadow-lg hover:shadow-xl transition-shadow duration-300 card-fade-in">
+        {/* {percentageOff && (
           <div className="absolute right-0 z-10 flex items-center bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold text-lg rounded-lg space-x-1 px-4 py-1 shadow-lg ">
           <BiSolidOffer className="w-6 h-6"/>
             {percentageOff}% Off
           </div>
-        )}
+        )} */}
         <div className="relative space-y-2">
           <img
             className="w-full md:h-[15rem] h-[10rem] object-cover rounded-t-lg"
@@ -67,7 +67,7 @@ const Card = ({ data, type }) => {
           </div>
 
           {data?.ActualPrice && (
-            <div className="flex flex-col md:flex-row p-1 md:px-4 px-2 justify-between border border-gray-300 rounded">
+            <div className="flex flex-row p-1 md:px-4 px-2 justify-between border border-gray-300 rounded">
               <h1 className="font-ralewayM">
                 Actual Price :{" "}
                 <span className="text-red-500 font-semibold font-sans">

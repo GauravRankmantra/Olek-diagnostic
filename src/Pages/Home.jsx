@@ -40,6 +40,8 @@ import { EffectCreative } from "swiper/modules";
 
 import Card from "../components/Card";
 import Location from "../components/Location";
+import WhyOlekDiagnostics from "../components/WhyOlekDiagnostics";
+import OurServices from "../components/OurServices";
 
 const data = [
   {
@@ -447,7 +449,7 @@ const Home = () => {
         </div>
 
         <hr className="text-[#a01a5a]"></hr>
-        <div className="flex w-[98%] md:w-[80%] mx-auto shadow-2xl rounded-3xl  my-10 md:my-32">
+        {/* <div className="flex w-[98%] md:w-[80%] mx-auto shadow-2xl rounded-3xl  my-10 md:my-32">
           <div className="space-y-4.5 border rounded-l-3xl p-4 px-5 border-[#e3f4a0]/30 md:w-[50%]">
             <h1 className="text-6xl md:text-7xl font-ralewayB text-[#a01a5a]">
               Olek Diagnostics
@@ -489,35 +491,14 @@ const Home = () => {
               className="w-full h-[25rem] object-cover"
             ></img>
           </div>
-        </div>
-
-        <div className="flex flex-col mt-20 space-y-6">
-          <h1 className="text-center text-4xl font-ralewayB text-[#a01a5a]">
-            Our Services
-          </h1>
-          <div className="text-center py-6 bg-[rgba(255,164,208,0.2)]">
-            <div
-              className={`flex flex-wrap gap-2 md:gap-8 justify-center overflow-hidden transition-all duration-500 ${
-                showAll ? "max-h-[1000rem]" : "max-h-[36rem]"
-              }`}
-            >
-              {cardData.map((item, index) => (
-                <Card type={"services"} data={item} key={index} />
-              ))}
-            </div>
-
-            <button
-              onClick={() => setShowAll((prev) => !prev)}
-              className="mt-10 px-6 cursor-pointer py-2 flex md:w-2/12 space-x-1.5 m-auto justify-center items-center text-[#a01a5a] bg-[rgba(255,164,208,1)]  transition rounded-md"
-            >
-              {showAll ? <IoIosArrowUp /> : <IoIosArrowDown />}
-              <span className="font-ralewaySb">
-                {" "}
-                {showAll ? "Show Less" : "Show More"}
-              </span>
-            </button>
+        </div> */}
+        <div >
+          <WhyOlekDiagnostics/>
           </div>
-        </div>
+          <div>
+            <OurServices/>
+          </div>
+
         <div>
           <img src={bg} className="w-full h-64 object-cover rotate-180"></img>
         </div>
@@ -536,6 +517,34 @@ const Home = () => {
             >
               {packages.map((item, index) => (
                 <Card type={"packages"} data={item} key={index} />
+              ))}
+            </div>
+
+            <button
+              onClick={() => setShowAll((prev) => !prev)}
+              className="mt-10 px-6 cursor-pointer py-2 flex md:w-2/12 space-x-1.5 m-auto justify-center items-center text-[#a01a5a] bg-[rgba(255,164,208,1)]  transition rounded-md"
+            >
+              {showAll ? <IoIosArrowUp /> : <IoIosArrowDown />}
+              <span className="font-ralewaySb">
+                {" "}
+                {showAll ? "Show Less" : "Show More"}
+              </span>
+            </button>
+          </div>
+        </div>
+        
+        <div className="flex flex-col mt-20 space-y-6">
+          <h1 className="text-center text-4xl font-ralewayB text-[#a01a5a]">
+            Our Services
+          </h1>
+          <div className="text-center py-6 bg-[rgba(255,164,208,0.2)]">
+            <div
+              className={`flex flex-wrap gap-2 md:gap-8 justify-center overflow-hidden transition-all duration-500 ${
+                showAll ? "max-h-[1000rem]" : "max-h-[36rem]"
+              }`}
+            >
+              {cardData.map((item, index) => (
+                <Card type={"services"} data={item} key={index} />
               ))}
             </div>
 

@@ -2,7 +2,7 @@
     font-family: RalewayR;
     src: url("./assets/fonts/Raleway-Regular.ttf");
   }
-  @font-face {
+  @font-face {  
       font-family: RalewayL;
       src: url("./assets/fonts/Raleway-Light.ttf");
     }
