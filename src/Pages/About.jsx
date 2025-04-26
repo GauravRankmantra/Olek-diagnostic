@@ -83,7 +83,7 @@ const AboutUs = () => {
       </section>
 
       {/* Meet Our Team */}
-      <section className="py-16 px-4 max-w-6xl mx-auto" data-aos="fade-up">
+      {/* <section className="py-16 px-4 max-w-6xl mx-auto" data-aos="fade-up">
         <div className="text-center mb-10">
           <h2 className="text-3xl font-bold text-[#a01a5a]">Meet Our Experts</h2>
           <p className="text-lg mt-2">A team of dedicated pathologists, lab technologists, and diagnostic specialists committed to your well-being.</p>
@@ -102,7 +102,7 @@ const AboutUs = () => {
             <p className="text-sm text-gray-600">Lab Operations Manager</p>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Patient Testimonials */}
       <section className="bg-gray-100 py-16 px-4" data-aos="fade-up">

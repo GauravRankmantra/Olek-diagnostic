@@ -50,17 +50,18 @@ const data = [
     subHeading:
       "Experience high-precision testing with our fully automated lab systems for faster and more dependable medical reports.",
   },
-  {
-    img: img2,
-    heading: "Special Discounts for In-House Lab Visits",
-    subHeading:
-      "Avail flat 20% off on all pathology tests. Premium members receive up to 25% off and access to secure QR-coded digital reports.",
-  },
+
   {
     img: img3,
     heading: "All-Inclusive Diagnostic Test Facility",
     subHeading:
       "Offering a complete range of lab tests including pathology, imaging, cardiology, and specialized screenings — all under one roof.",
+  },
+  {
+    img: img2,
+    heading: "Special Discounts for In-House Lab Visits",
+    subHeading:
+      "Avail flat 20% off on all pathology tests. Premium members receive up to 25% off and access to secure QR-coded digital reports.",
   },
   {
     img: img4,
@@ -352,7 +353,7 @@ const Slide = ({
   const isActive = index === activeIndex;
 
   return (
-    <div className="w-full h-[40rem] bg-white flex flex-col md:flex-row overflow-hidden">
+    <div className="w-full h-[50rem] bg-white flex flex-col md:flex-row overflow-hidden">
       {/* Left Section - Text */}
       <motion.div
         key={heading}
@@ -366,11 +367,11 @@ const Slide = ({
           animate={isActive ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.8 }}
           src={logo}
-          className="h-20 w-44 mb-2"
+          className="h-full w-full md:w-[22rem] p-2 md:h-44 mb-2 border border-gray-300 shadow-md rounded-md"
           alt="Logo"
         />
 
-        <h1 className="text-3xl md:text-5xl lg:text-6xl font-ralewayB text-[#a01a5a] leading-tight">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-ralewayB text-[#a01a5a] leading-tight">
           {heading}
         </h1>
 
@@ -444,7 +445,7 @@ const Home = () => {
           ))}
         </Swiper>
         <hr className="text-gray-400"></hr>
-        <div >
+        <div>
           <HealthCheckupHero />
         </div>
 
@@ -492,12 +493,12 @@ const Home = () => {
             ></img>
           </div>
         </div> */}
-        <div >
-          <WhyOlekDiagnostics/>
-          </div>
-          <div>
-            <OurServices/>
-          </div>
+        <div>
+          <WhyOlekDiagnostics />
+        </div>
+        <div>
+          <OurServices />
+        </div>
 
         <div>
           <img src={bg} className="w-full h-64 object-cover rotate-180"></img>
@@ -532,7 +533,7 @@ const Home = () => {
             </button>
           </div>
         </div>
-        
+
         <div className="flex flex-col mt-20 space-y-6">
           <h1 className="text-center text-4xl font-ralewayB text-[#a01a5a]">
             Our Services
@@ -560,8 +561,8 @@ const Home = () => {
             </button>
           </div>
         </div>
-{/* Show only on mobile screens (md and above: hidden) */}
-{/* <div className=" md:hidden  flex justify-center w-full mx-auto">
+        {/* Show only on mobile screens (md and above: hidden) */}
+        {/* <div className=" md:hidden  flex justify-center w-full mx-auto">
   <Swiper
     modules={[Autoplay, EffectCreative]}
     effect={"creative"}
@@ -584,7 +585,6 @@ const Home = () => {
     ))}
   </Swiper>
 </div> */}
-
 
         <div>
           <TestimonialSwiper />

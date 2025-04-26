@@ -9,128 +9,137 @@ const PrivacyPolicy = () => {
 
       <section className="space-y-4">
         <p>
-          This privacy policy is an electronic record in the form of an
-          electronic contract formed under the Information Technology Act, 2000,
-          and the rules made thereunder. This policy does not require any
-          physical, electronic, or digital signature.
+          At Olek Diagnostics, we are committed to safeguarding the privacy of
+          all personal and medical information entrusted to us. This Privacy
+          Policy outlines how we collect, use, and protect your data when you
+          use our diagnostic services, visit our website, or access your medical
+          records through our systems.
         </p>
         <p>
-          Olek Diagnostics and its affiliates and Associate Companies are
-          concerned about the privacy of data and information of users
-          (including sellers and buyers/customers) offering, selling, or
-          purchasing products or services on our websites or mobile applications
-          (“Website”). “Associate Companies” shall have the same meaning as
-          defined in the Companies Act, 2013.
-        </p>
-        <p>
-          This Privacy Policy is a contract between you and the respective
-          entity whose website you use or access. It must be read in conjunction
-          with our Terms of Use and other terms applicable to the Website.
+          By using our services, you agree to the collection and use of
+          information in accordance with this policy.
         </p>
       </section>
 
       <hr className="my-8 border-gray-300" />
 
       <h2 className="text-2xl font-semibold text-[#a01a5a] mb-4">
-        Collection of Personally Identifiable Information
-      </h2>
-      <p>
-        We collect information when you place an order or subscribe to our
-        website. You may be asked for your name, email address, mailing address,
-        phone number, or credit card details. This helps us offer a smooth,
-        customized experience and improve our services continually.
-      </p>
-
-      <h2 className="text-2xl font-semibold text-[#a01a5a] mt-8 mb-4">
-        Use of Demographic / Profile Data
-      </h2>
-      <p>
-        We use personal information to provide services, resolve disputes,
-        troubleshoot issues, enforce policies, and inform you about offers and
-        updates. You may opt out of marketing communications at any time.
-      </p>
-      <p>
-        We also collect and analyze demographic and profile data to improve our
-        product and service offerings.
-      </p>
-
-      <h2 className="text-2xl font-semibold text-[#a01a5a] mt-8 mb-4">
-        Cookies
-      </h2>
-      <p>
-        Yes, we use cookies—small files stored via your browser—to help us
-        remember and process items in your cart. These cookies do not contain
-        any personally identifiable information.
-      </p>
-
-      <h2 className="text-2xl font-semibold text-[#a01a5a] mt-8 mb-4">
-        Sharing of Personal Information
-      </h2>
-      <p>
-        By providing your information, you consent that it does not violate any
-        third-party agreements or legal requirements. We may disclose personal
-        data when required by law or under good faith to respond to legal
-        processes such as subpoenas or court orders.
-      </p>
-
-      <h2 className="text-2xl font-semibold text-[#a01a5a] mt-8 mb-4">
-        Security Precautions
-      </h2>
-      <p>
-        We implement strict security measures to safeguard your personal
-        information. Secure servers are used whenever you access or change
-        account data.
-      </p>
-
-      <h2 className="text-2xl font-semibold text-[#a01a5a] mt-8 mb-4">
-        Choice/Opt-Out
-      </h2>
-      <p>
-        Users may opt out of receiving non-essential communications
-        (marketing/promotional) from us or our partners after account setup.
-      </p>
-
-      <h2 className="text-2xl font-semibold text-[#a01a5a] mt-8 mb-4">
-        Permissions
+        Information We Collect
       </h2>
       <ul className="list-disc pl-5 space-y-2">
         <li>
-          <strong>Identity:</strong> Allows access to saved accounts and
-          personal data stored on your device.
+          <strong>Personal Identification Information:</strong> Full name, date
+          of birth, contact number, email address, postal address, and gender.
         </li>
         <li>
-          <strong>SMS:</strong> May send messages for important announcements.
-          Carrier charges may apply.
+          <strong>Medical Records:</strong> Lab test requests, diagnostic
+          reports, prescriptions, doctor referrals, and health history submitted
+          by you or your physician.
         </li>
         <li>
-          <strong>Photos/Media/Files:</strong> Needed for storage and sharing
-          features.
-        </li>
-        <li>
-          <strong>Camera and Microphone:</strong> Required for taking and
-          posting product photos or voice search.
-        </li>
-        <li>
-          <strong>Phone:</strong> Used to enable call functionality within the
-          app and access call logs.
+          <strong>Payment Information:</strong> payment method, and transaction
+          history (processed through secure third-party providers).
         </li>
       </ul>
 
       <h2 className="text-2xl font-semibold text-[#a01a5a] mt-8 mb-4">
-        Your Approval
+        Use of Information
       </h2>
       <p>
-        By using the Website and providing information, you consent to its
-        collection and use in accordance with this Privacy Policy. If we make
-        any changes to the policy, they will be updated on this page.
+        We use your personal and medical data solely for the following purposes:
+      </p>
+      <ul className="list-disc pl-5 space-y-2">
+        <li>
+          To conduct diagnostic tests and generate medical reports accurately.
+        </li>
+        <li>
+          To contact you regarding test results, follow-ups, or service
+          feedback.
+        </li>
+        <li>
+          To provide access to your reports via secured online portals or email.
+        </li>
+        <li>
+          To improve our diagnostic services, accuracy, and user experience.
+        </li>
+        <li>
+          To comply with legal and regulatory requirements for healthcare
+          providers.
+        </li>
+      </ul>
+
+      <h2 className="text-2xl font-semibold text-[#a01a5a] mt-8 mb-4">
+        Protection of Your Data
+      </h2>
+      <p>
+        All data, including your diagnostic reports, are stored on secure,
+        encrypted servers and are accessible only to authorized personnel. We
+        implement stringent physical, electronic, and managerial measures to
+        ensure data confidentiality.
+      </p>
+      <p>
+        Your data is never shared, sold, or disclosed to any third party without
+        your explicit consent, unless required by law or court order.
+      </p>
+
+      <h2 className="text-2xl font-semibold text-[#a01a5a] mt-8 mb-4">
+        Medical Reports
+      </h2>
+
+      <p>
+        Reports are stored for a defined period as mandated by local medical
+        record retention laws and then securely deleted or archived.
+      </p>
+
+      <h2 className="text-2xl font-semibold text-[#a01a5a] mt-8 mb-4">
+        Data Sharing and Legal Compliance
+      </h2>
+      <p>We may disclose information only when:</p>
+      <ul className="list-disc pl-5 space-y-2">
+        <li>Required by regulatory authorities or court orders.</li>
+        <li>
+          To healthcare professionals involved in your treatment (with your
+          consent).
+        </li>
+        <li>
+          To insurance providers, if you are availing claim-based diagnostics.
+        </li>
+      </ul>
+
+      <h2 className="text-2xl font-semibold text-[#a01a5a] mt-8 mb-4">
+        Cookies and Website Tracking
+      </h2>
+      <p>
+        Our website may use cookies for basic functionality and analytics.
+        However, we do not store any personal or medical information in cookies
+        or trackers. Your browsing data is anonymous and never linked to your
+        lab reports or personal identity.
+      </p>
+
+      <h2 className="text-2xl font-semibold text-[#a01a5a] mt-8 mb-4">
+        Your Consent
+      </h2>
+      <p>
+        By accessing our services or submitting your samples, you provide
+        informed consent for us to collect and use your medical information for
+        diagnostic and service-related purposes, as outlined in this policy.
+      </p>
+
+      <h2 className="text-2xl font-semibold text-[#a01a5a] mt-8 mb-4">
+        Updates to the Privacy Policy
+      </h2>
+      <p>
+        We may update this policy from time to time. Any changes will be posted
+        on this page with the revised effective date.
       </p>
 
       <h2 className="text-2xl font-semibold text-[#a01a5a] mt-8 mb-4">
         Contact Us
       </h2>
       <p>
-        If you have any questions about this privacy policy, you may contact us
-        using the details provided on our website.
+        For questions, concerns, or requests related to your personal data or
+        this privacy policy, please contact us via the details provided on our
+        website or visit your nearest Olek Diagnostics branch.
       </p>
     </div>
   );

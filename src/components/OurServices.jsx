@@ -7,6 +7,8 @@ import diabetes from "../assets/Images/diabetes.jpg";
 
 import { BsArrowRight } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
+import ContactForm from "./ContactForm";
+import { useState } from "react";
 const featuredServices = [
   {
     title: "Unlocking Your Blood's Secrets",
@@ -41,7 +43,11 @@ const featuredServices = [
 
 const OurServices = () => {
     const navigate = useNavigate();
+      const [showForm, setShowForm] = useState(false);
   return (
+    <>
+     {showForm && <ContactForm onClose={() => setShowForm(false)} />}
+
     <section className="relative py-24  px-6 lg:px-20 overflow-hidden">
       {/* Background Image + Dark Overlay */}
       <div
@@ -151,7 +157,9 @@ const OurServices = () => {
                     </p>
                   )}
                 </div>
-                <button className="mt-4 bg-[#a01a5a] hover:bg-[#2a141e] cursor-pointer text-white font-medium py-2 px-4 rounded-full transition-colors duration-300 self-start">
+                <button
+                            onClick={() => setShowForm(true)}
+                className="mt-4 bg-[#a01a5a] hover:bg-[#2a141e] cursor-pointer text-white font-medium py-2 px-4 rounded-full transition-colors duration-300 self-start">
                   Schedule Now
                 </button>
               </div>
@@ -160,6 +168,7 @@ const OurServices = () => {
         </motion.div>
       </div>
     </section>
+    </>
   );
 };
 

@@ -16,39 +16,40 @@ import {
       icon: <FaVial />,
       value: "10k+",
       label: "Tests Conducted",
-      color: "#a01a5a",
+      color: "#a01a5a", // stays same
     },
     {
       icon: <FaRegClock />,
-      value: "24x7",
-      label: "Customer Support",
-      color: "#f59e0b",
+      value: "8AM - 8PM",
+      label: "Opening Hours",
+      color: "#3b82f6", // blue-ish to represent time (changed from yellow)
     },
     {
       icon: <FaCheckCircle />,
-      value: "99.5%",
-      label: "Accuracy Rate",
-      color: "#16a34a",
+      value: "100%",
+      label: "Safe & Hygienic Procedures",
+      color: "#16a34a", // green for hygiene/safety (good)
     },
     {
       icon: <FaUsers />,
       value: "5K+",
       label: "Happy Patients",
-      color: "#f59e0b",
+      color: "#f59e0b", // stays yellow/orange for happiness
     },
     {
-      icon: <FaUserMd />,
-      value: "35+",
-      label: "Medical Experts",
-      color: "#6366f1",
+      icon: <FaVial />,
+      value: "10k+",
+      label: "Safe & Reliable Sample Collection",
+      color: "#6366f1", // violet for variety (good for quality)
     },
     {
       icon: <FaUser />,
       value: "10+",
       label: "Experienced Staff",
-      color: "#6366f1",
+      color: "#6366f1", // stays same
     },
   ];
+  
   
   const WhyOlekDiagnostics = () => {
     return (
