@@ -281,7 +281,7 @@ const packages = [
     description:
       "A perfect package for those looking to monitor chronic conditions like diabetes and thyroid imbalance, with advanced screening and blood glucose monitoring.",
     tests:
-      "CBC, HBA1C, BSF, LFT, KFT, LIPID PROFILE, TFT, URINE, ROUTINE EXAMINATION",
+      "CBC, HBA1C, BSF, LFT, KFT, LIPID PROFILE, TFT, URINE ROUTINE EXAMINATION",
     ActualPrice: 3170,
     OfferPrice: 1499,
     rating: 4.0,
@@ -314,7 +314,7 @@ const packages = [
     description:
       "Our most detailed package for complete health evaluation. Includes infectious disease screening, hormonal balance, vitamin levels, and organ health.",
     tests:
-      "CBC, HBA1C, BSF, LFT, KFT, LIPID PROFILE, TFT, VITAMIN D3, VITAMIN B12, HIV, HCV, HbsAg, URINE, ROUTINE EXAMINATION",
+      "CBC, HBA1C, BSF, LFT, KFT, LIPID PROFILE, TFT, VITAMIN D3, VITAMIN B12, HIV, HCV, HbsAg, URINE ROUTINE EXAMINATION",
     ActualPrice: 7420,
     OfferPrice: 3499,
     rating: 4.5,
