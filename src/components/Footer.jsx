@@ -113,7 +113,7 @@ const Footer = () => {
         {/* Contact Info */}
         <div>
           <h4 className="text-2xl font-bold mb-6 tracking-wide">Contact Us</h4>
-          <div className="space-y-3 text-gray-700">
+          <div className="space-y-3  text-gray-700">
             <p className="flex items-start text-lg font-semibold">
               <FaMapMarkerAlt className="mr-2 mt-1 text-[#a01a5a]" />
               Shimla Enclave, GMS Road,

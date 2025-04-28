@@ -26,7 +26,7 @@ const stats = [
   },
   {
     icon: <FaCogs />,
-    value: "Advanced Labs",
+    value: "Advanced Lab",
     label: "Latest Diagnostic Equipment",
     color: "#16a34a",
   },
