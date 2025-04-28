@@ -91,18 +91,20 @@ const TopNavbar = () => {
     </a>
 
           {/* WhatsApp Special */}
-          <a
-            href="https://wa.me/919368548552"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="WhatsApp"
-            className="relative animate-fade-in-slow"
-          >
-            <div className="p-3 w-14 h-14 md:w-16 md:h-16 rounded-full bg-green-100 hover:bg-green-200 shadow-lg transform hover:scale-110 transition-all duration-300 flex items-center justify-center">
-              <FaWhatsapp className="text-green-600 w-8 h-8 md:w-10 md:h-10 " />
-              <span className="absolute top-0 right-0 translate-x-1/2 -translate-y-1/2 bg-green-500 rounded-full w-2.5 h-2.5 animate-ping"></span>
-            </div>
-          </a>
+      <div className=" z-50">
+        <a
+            href={`tel:${phoneNumber}`}
+          target="_blank"
+          rel="noopener noreferrer"
+
+          className="relative  animate-fade-in-slow"
+        >
+          <div className="p-3 w-12 h-12 rounded-full bg-pink-100 hover:bg-green-200 shadow-lg transform hover:scale-110 transition-all duration-300 flex items-center justify-center">
+            <IoMdCall className="text-[#a01a5a] w-10 h-10 md:w-10 md:h-10" />
+            <span className="absolute top-0 right-0 translate-x-1/2 -translate-y-1/2 bg-[#a01a5a] rounded-full w-2.5 h-2.5 animate-ping"></span>
+          </div>
+        </a>
+      </div>
         </div>
       </div>
     </div>

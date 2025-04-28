@@ -132,7 +132,7 @@ const Footer = () => {
               className="flex items-center text-lg font-semibold hover:text-[#8b0a42] transition-colors duration-300 break-all"
             >
               <FaEnvelope className="mr-2 text-[#a01a5a]" />
-              olekdiagnosticsandhealth@gmail.com
+             <span className="text-sm"> olekdiagnosticsandhealth@gmail.com</span>
             </a>
           </div>
         </div>
@@ -149,7 +149,7 @@ const Footer = () => {
             Popular Tests
           </h4>
           <ul className="space-y-3 text-lg font-semibold">
-            <li>Radiology & Cardio Services</li>
+
             <li>Health Packages</li>
             <li>Pathology Services</li>
             <li>Hormones Testing</li>
@@ -212,7 +212,7 @@ const Footer = () => {
 
 
 
-      <div className="fixed bottom-6 right-6 z-50">
+      {/* <div className="fixed bottom-6 right-6 z-50">
         <a
             href={`tel:${phoneNumber}`}
           target="_blank"
@@ -225,9 +225,9 @@ const Footer = () => {
             <span className="absolute top-0 right-0 translate-x-1/2 -translate-y-1/2 bg-[#a01a5a] rounded-full w-2.5 h-2.5 animate-ping"></span>
           </div>
         </a>
-      </div>
+      </div> */}
 
-      <div className="md:fixed hidden bottom-6 left-6 z-50">
+      <div className="fixed bottom-6 right-6 z-50">
         <a
           href="https://wa.me/919368548552"
           target="_blank"

@@ -41,7 +41,7 @@ const Navbar = () => {
     <>
     <TopNavbar/>
   
-    <nav className="bg-white border-b mt-[5.5rem] border-gray-100 shadow-md font-ralewaySb sticky top-0 z-10">
+    <nav className="bg-white border-b mt-[4.5rem] border-gray-100 shadow-md font-ralewaySb sticky top-0 z-10">
       <div className="max-w-screen-xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-3">

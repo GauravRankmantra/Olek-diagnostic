@@ -73,7 +73,7 @@ const CardDetail = ({ type, bookNow, onClose, data }) => {
                   <strong className="font-ralewayB text-lg">
                     Interpretation:
                   </strong>
-                  <pre className="whitespace-pre-wrap">
+                  <pre className="font-ralewayR whitespace-pre-wrap">
                     {data.interpretation}
                   </pre>
                 </div>
@@ -93,8 +93,9 @@ const CardDetail = ({ type, bookNow, onClose, data }) => {
             )}
 
             {/* Price & Book Button */}
+
             <div className="mt-6 flex items-center justify-between">
-              {type === "services" && (
+              {data.price && type === "services" && (
                 <span className="text-lg font-sans font-semibold text-[#a01a5a]">
                   ₹{data.price}
                 </span>

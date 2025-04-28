@@ -22,13 +22,14 @@ import Location from "../components/Location";
 
 const Services = () => {
   const [showAll, setShowAll] = useState(false);
+    const [showDetail, setShowDetail] = useState(false);
 const cardData = [
   {
     title: "Haematology Profile",
     description:
       "The Haematology Profile encompasses critical blood tests that analyze red and white blood cells, hemoglobin, platelets, and other parameters essential for diagnosing blood-related conditions.",
     img: img1,
-    price: 1500,
+ 
     components: [
       "Complete Blood Count (CBC)",
       "Hemoglobin (Hb)",
@@ -52,7 +53,7 @@ const cardData = [
     description:
       "This test evaluates key liver enzymes, proteins, and bilirubin levels to monitor liver performance and detect diseases like hepatitis or fatty liver.",
     img: img2,
-    price: 2500,
+
     components: [
       "Alanine transaminase (ALT)",
       "Aspartate transaminase (AST)",
@@ -76,7 +77,7 @@ const cardData = [
     description:
       "Kidney Function Tests (KFT) assess the kidney’s ability to remove waste, balance fluids, and regulate electrolytes—vital for maintaining health.",
     img: img3,
-    price: 2000,
+
     components: [
       "Serum Creatinine",
       "Blood Urea Nitrogen (BUN)",
@@ -98,7 +99,7 @@ const cardData = [
     description:
       "A complete lipid profile helps assess your risk for heart disease by measuring different types of fats and cholesterol in the blood.",
     img: lipid,
-    price: 1800,
+   
     components: [
       "Total Cholesterol",
       "LDL (Bad Cholesterol)",
@@ -121,7 +122,7 @@ const cardData = [
     description:
       "This test panel measures blood glucose levels and long-term sugar control indicators to diagnose and manage diabetes effectively.",
     img: diabetes,
-    price: 2200,
+
     components: [
       "Fasting Blood Sugar (FBS)",
       "Post-Meal Blood Sugar (PPBS)",
@@ -143,7 +144,7 @@ const cardData = [
     description:
       "FNAC is a quick and minimally invasive diagnostic technique that examines cellular samples from lumps or swellings to identify infections or malignancies.",
     img: img1,
-    price: 3000,
+    
     components: ["Microscopic Cell Analysis", "Cytological Evaluation"],
     importance:
       "Useful for detecting infections, inflammatory conditions, or tumors, especially in the thyroid, breast, or lymph nodes.",
@@ -159,7 +160,7 @@ const cardData = [
     description:
       "This panel evaluates the body's levels of Vitamin D and B12, essential for bone strength, red blood cell formation, and neurological health.",
     img: img2,
-    price: 2000,
+  
     components: ["25-Hydroxy Vitamin D", "Vitamin B12 (Cobalamin)"],
     importance:
       "Crucial for diagnosing deficiencies that can lead to fatigue, osteoporosis, numbness, and cognitive changes.",
@@ -175,7 +176,7 @@ const cardData = [
     description:
       "This comprehensive test panel examines hormone levels to detect issues in thyroid, adrenal, reproductive, or pituitary functions.",
     img: harmon,
-    price: 3500,
+
     components: [
       "TSH, T3, T4",
       "Estrogen & Testosterone",
@@ -197,7 +198,7 @@ const cardData = [
     description:
       "Urine and sputum tests help detect infections, kidney issues, and respiratory diseases by analyzing fluid samples under a microscope and through cultures.",
     img: img3,
-    price: 1600,
+ 
     components: [
       "Urinalysis (Physical, Chemical, Microscopic)",
       "Urine Culture & Sensitivity",
@@ -270,7 +271,7 @@ const cardData = [
         <div className="bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl transition">
           <GiStethoscope className="text-[#a01a5a] text-4xl mx-auto mb-4" />
           <h3 className="text-xl font-semibold mb-2">Doctor Consultation</h3>
-          <p className="text-gray-600">Post-test consultations available with internal medicine specialists & health advisors.</p>
+          <p className="text-gray-600">Post-test consultations available & health advisors.</p>
         </div>
         <div className="bg-white shadow-lg rounded-xl p-6 hover:shadow-2xl transition">
           <FaUserNurse className="text-[#a01a5a] text-4xl mx-auto mb-4" />
