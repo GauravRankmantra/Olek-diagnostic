@@ -96,7 +96,7 @@ const WhyOlekDiagnostics = () => {
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.3 }}
+                viewport={{ once: false, amount: 0.3 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-white/90 rounded-2xl p-5 shadow-md hover:shadow-lg transition duration-300 text-center"
               >
