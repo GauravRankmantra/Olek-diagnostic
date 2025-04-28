@@ -18,19 +18,19 @@ const Footer = () => {
   const socialLinks = [
     {
       icon: <FaInstagram />,
-      url: "https://www.instagram.com/yourprofile",
+      url: "https://www.instagram.com/olekdiagnostics?igsh=OXRuMnAxbmgyOXgw",
       label: "Instagram",
       color: "#E1306C",
     },
     {
       icon: <FaFacebookF />,
-      url: "https://www.facebook.com/yourpage",
+      url: "https://www.facebook.com/profile.php?id=61563359972098",
       label: "Facebook",
       color: "#1877F2",
     },
     {
       icon: <FaYoutube />,
-      url: "https://www.youtube.com/yourchannel",
+      url: "https://youtube.com/@olekdiagnostics?si=aykbZo97p1hiDZch",
       label: "YouTube",
       color: "#FF0000",
     },

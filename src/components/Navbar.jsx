@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/Images/olekLogo.jpg";
 import { IoMdCall } from "react-icons/io";
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
-import { FaInstagram, FaWhatsapp, FaFacebookF } from "react-icons/fa";
+import { FaInstagram, FaWhatsapp, FaFacebookF,FaYoutube } from "react-icons/fa";
 import TopNavbar from "./TopNavbar";
 
 const Navbar = () => {
@@ -22,18 +22,21 @@ const Navbar = () => {
   const socialLinks = [
     {
       icon: <FaInstagram />,
-      url: "https://www.instagram.com/yourprofile",
+      url: "https://www.instagram.com/olekdiagnostics?igsh=OXRuMnAxbmgyOXgw",
       label: "Instagram",
-    },
-    {
-      icon: <FaWhatsapp />,
-      url: "https://wa.me/919368548552",
-      label: "WhatsApp",
+      color: "#E1306C",
     },
     {
       icon: <FaFacebookF />,
-      url: "https://www.facebook.com/yourpage",
+      url: "https://www.facebook.com/profile.php?id=61563359972098",
       label: "Facebook",
+      color: "#1877F2",
+    },
+    {
+      icon: <FaYoutube />,
+      url: "https://youtube.com/@olekdiagnostics?si=aykbZo97p1hiDZch",
+      label: "YouTube",
+      color: "#FF0000",
     },
   ];
 
@@ -61,9 +64,9 @@ const Navbar = () => {
 
         {/* Nav Links */}
         <ul
-          className={`flex flex-col md:flex-row md:items-center md:space-x-8 absolute md:static top-16 left-0 w-full md:w-auto bg-gray-200 md:bg-transparent z-40 p-4 md:p-0 transition-all duration-300 ease-in-out ${
+          className={`flex flex-col md:flex-row md:items-center md:space-x-8 absolute md:static top-16 left-0 w-full md:w-auto bg-white md:bg-transparent z-40 p-4 md:p-0 transition-all duration-300 ease-in-out ${
             isOpen
-              ? "block border-t md:border-t-0 space-y-1.5"
+              ? "block border border-gray-200 md:border-t-0 space-y-1.5"
               : "hidden md:flex"
           }`}
         >
