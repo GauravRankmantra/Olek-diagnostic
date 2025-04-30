@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { IoMdClose } from "react-icons/io";
+import toast from "react-hot-toast";
 
 const ContactForm = ({ onClose }) => {
   const [formData, setFormData] = useState({
@@ -25,15 +26,15 @@ const ContactForm = ({ onClose }) => {
     setSending(true);
 
     emailjs
-      .send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", formData, "YOUR_PUBLIC_KEY")
+      .send("service_lbk2rb1", "template_n7exmo1", formData, "K6x6qEqgzizR5OSXS")
       .then(
         () => {
-          alert("Message sent successfully!");
+          toast.success("Message sent successfully!");
           setFormData({ name: "", email: "", phone: "", message: "" });
           setSending(false);
         },
         (error) => {
-          alert("Failed to send message.");
+          toast.error("Failed to send message.");
           console.error(error);
           setSending(false);
         }

@@ -3,20 +3,32 @@ import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
 const Contact = () => {
   const formRef = useRef();
+  const [formData, setFormData] = React.useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
       const res = await emailjs.sendForm(
-        "service_gaizbsg",
-        "template_m0e2uo8",
+        "service_lbk2rb1",
+        "template_n7exmo1",
         formRef.current,
-        "U4tTIdn-hdGvuqIV_"
+        "K6x6qEqgzizR5OSXS"
       );
 
-      toast.success("We will contact you Asap!");
-      onClose();
+      if(res)
+      {
+        toast.success("We will contact you Asap!");
+        setFormData({ name: "", email: "", phone: "", message: "" });
+      }
+     else{
+      toast.error("try after some time")
+     }
     } catch (err) {
       // toast.error("Failed to send message. Try again!");
       console.error("Email error:", err);
@@ -105,7 +117,7 @@ const Contact = () => {
                       Phone Number
                     </h4>
                     <p className="text-base font-sans text-body-color dark:text-dark-6">
-                    09368548552
+                      09368548552
                     </p>
                   </div>
                 </div>
@@ -130,7 +142,7 @@ const Contact = () => {
                       Email Address
                     </h4>
                     <p className="text-base text-body-color dark:text-dark-6">
-                    olekdiagnosticsandhealth@gmail.com
+                      olekdiagnosticsandhealth@gmail.com
                     </p>
                   </div>
                 </div>
@@ -138,37 +150,78 @@ const Contact = () => {
             </div>
             <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
               <div className="relative rounded-lg bg-white p-8 shadow-lg dark:bg-dark-2 sm:p-12">
-                <form ref={formRef} onSubmit={handleSubmit}>
-                  <ContactInputBox
+                <form
+                  ref={formRef}
+                  onSubmit={handleSubmit}
+                  className="grid grid-cols-1 gap-4 sm:grid-cols-2"
+                >
+                  <h1 className="text-xl font-ralewaySb">Type your detail</h1>
+                  <input
                     type="text"
                     name="name"
                     placeholder="Your Name"
+                    value={formData.name}
+                    onChange={(e) =>
+                      setFormData({ ...formData, name: e.target.value })
+                    }
+                    className="col-span-1 sm:col-span-2 w-full rounded border border-gray-300 bg-white px-4 py-3 text-sm text-gray-700 shadow-sm focus:border-[#a01a5a] focus:outline-none focus:ring-1 focus:ring-[#a01a5a]"
                   />
-                  <ContactInputBox
-                    type="text"
+
+                  <input
+                    type="email"
                     name="email"
                     placeholder="Your Email"
+                    value={formData.email}
+                    onChange={(e) =>
+                      setFormData({ ...formData, email: e.target.value })
+                    }
+                    className="w-full rounded border border-gray-300 bg-white px-4 py-3 text-sm text-gray-700 shadow-sm focus:border-[#a01a5a] focus:outline-none focus:ring-1 focus:ring-[#a01a5a]"
                   />
-                  <ContactInputBox
+
+                  <input
                     type="text"
                     name="phone"
                     placeholder="Your Phone"
+                    value={formData.phone}
+                    onChange={(e) =>
+                      setFormData({ ...formData, phone: e.target.value })
+                    }
+                    className="w-full rounded border border-gray-300 bg-white px-4 py-3 text-sm text-gray-700 shadow-sm focus:border-[#a01a5a] focus:outline-none focus:ring-1 focus:ring-[#a01a5a]"
                   />
-                  <ContactTextArea
-                    row="6"
+
+                  <textarea
+                    name="message"
+                    rows="5"
                     placeholder="Your Message"
-                    name="details"
-                    defaultValue=""
+                    value={formData.message}
+                    onChange={(e) =>
+                      setFormData({ ...formData, message: e.target.value })
+                    }
+                    className="col-span-1 sm:col-span-2 w-full rounded border border-gray-300 bg-white px-4 py-3 text-sm text-gray-700 shadow-sm focus:border-[#a01a5a] focus:outline-none focus:ring-1 focus:ring-[#a01a5a]"
                   />
-                  <div>
+
+                  <div className="col-span-1 sm:col-span-2 mt-2">
                     <button
                       type="submit"
-                      className="w-full cursor-pointer rounded border border-primary bg-[#a01a5a] p-3 text-white transition hover:bg-opacity-90"
+                      disabled={
+                        !formData.name ||
+                        !formData.email ||
+                        !formData.phone 
+     
+                      }
+                      className={`w-full rounded px-5 py-3 text-sm font-medium text-white transition ${
+                        !formData.name ||
+                        !formData.email ||
+                        !formData.phone 
+                          ? "cursor-not-allowed bg-gray-400"
+                          : "cursor-pointer bg-[#a01a5a] hover:bg-[#86124a]"
+                      }`}
                     >
                       Send Message
                     </button>
                   </div>
                 </form>
+
                 <div>
                   <span className="absolute -right-9 -top-10 z-[-1]">
                     <svg
@@ -992,12 +1045,12 @@ const ContactTextArea = ({ row, placeholder, name, defaultValue }) => {
   return (
     <>
       <div className="mb-6">
-        <textarea
-          rows={row}
-          placeholder={placeholder}
-          name={name}
-          className="w-full resize-none rounded border border-stroke px-[14px] py-3 text-base text-body-color outline-none focus:border-primary dark:border-dark-3 dark:bg-dark dark:text-dark-6"
-          defaultValue={defaultValue}
+        <input
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          value={formData.name}
+          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
         />
       </div>
     </>
@@ -1009,10 +1062,11 @@ const ContactInputBox = ({ type, placeholder, name }) => {
     <>
       <div className="mb-6">
         <input
-          type={type}
-          placeholder={placeholder}
-          name={name}
-          className="w-full rounded border border-stroke px-[14px] py-3 text-base text-body-color outline-none focus:border-primary dark:border-dark-3 dark:bg-dark dark:text-dark-6"
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          value={formData.name}
+          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
         />
       </div>
     </>
